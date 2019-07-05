@@ -1,0 +1,441 @@
+<!doctype html>
+
+
+<html class="no-js" lang="sl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="google-blockly/blockly_compressed.js"></script>
+    <script src="google-blockly/javascript_compressed.js"></script>
+    
+
+
+   
+	<!-- <script src="google-blockly/blocks_compressed.js"></script> -->
+	<script src="google-blockly/msg/js/sl.js"></script>
+    <script src="google-blockly/slomsg.js"></script>
+
+
+	<script src="google-blockly/blocks/logic.js"></script>
+	<script src="google-blockly/blocks/loops.js"></script>
+	<script src="google-blockly/blocks/math.js"></script>
+	<script src="google-blockly/blocks/text.js"></script>
+	<script src="google-blockly/blocks/lists.js"></script>
+	<script src="google-blockly/blocks/colour.js"></script>
+	<script src="google-blockly/blocks/variables.js"></script>
+	<script src="google-blockly/blocks/procedures.js"></script>
+
+  </head>
+
+  <body>
+
+  	<div class="grid-x grid-margin-x">
+  		 <div class="cell medium-2 large-2">
+  			
+  				 
+    <ul class="vertical menu columns large-2 medium-2 align-left ">
+  <li><a href="#">One</a></li>
+  <li><a href="#">Two</a></li>
+  <li><a href="#">Three</a></li>
+  <li><a href="#">Four</a></li>
+</ul>
+</div>
+
+<div class="cell large-7 medium-7">
+<p>
+	Kaj je Lorem Ipsum?
+Lorem Ipsum je slepi tekst, ki se uporablja pri razvoju tipografij in pri pripravi za tisk. Lorem Ipsum je v uporabi že več kot petsto let saj je to kombinacijo znakov neznani tiskar združil v vzorčno knjigo že v začetku 16. stoletja. To besedilo pa ni zgolj preživelo pet stoletij, temveč se je z malenkostnimi spremembami uspešno uveljavilo tudi v elektronskem namiznem založništvu. Na priljubljenosti je Lorem Ipsum pridobil v sedemdesetih letih prejšnjega stoletja, ko so na trg lansirali Letraset folije z Lorem Ipsum odstavki. V zadnjem času se Lorem Ipsum pojavlja tudi v priljubljenih programih za namizno založništvo kot je na primer Aldus PageMaker.
+</p>
+<div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+</div>
+<input type="button" id="codeToString" onClick="executingCode();"> 
+
+<input type="text" id="textarea" name="name" required
+       minlength="6" maxlength="6" size="6">
+
+
+</div>
+
+
+
+
+  </body>
+</html>
+
+<!--<xml id="toolbox" style="display: none">
+  <category name="Logic" colour="210"> name:</category>
+  <category name="Loops" colour="120">...</category>
+  <category name="Math" colour="230">...</category>
+  <category name="Colour" colour="20">...</category>
+  <block type="controls_if"></block>
+  <block type="controls_repeat_ext"></block>
+  <block type="logic_compare"></block>
+  <block type="math_number"></block>
+  <block type="math_arithmetic"></block>
+  <block type="text"></block>
+  <block type="text_print"></block>
+</xml> -->
+
+ <xml id="toolbox" style="display: none">
+    <category name="Pogoji" colour="%{BKY_LOGIC_HUE}">
+      <category name="Če">
+        <block type="controls_if"></block>
+        <block type="controls_if">
+          <mutation else="1"></mutation>
+        </block>
+        <block type="controls_if">
+          <mutation elseif="1" else="1"></mutation>
+        </block>
+      </category>
+      <category name="Boolean" colour="%{BKY_LOGIC_HUE}">
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_null"></block>
+        <block type="logic_ternary"></block>
+      </category>
+    </category>
+    <category name="Zanke" colour="%{BKY_LOOPS_HUE}">
+      <block type="controls_repeat_ext">
+        <value name="TIMES">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+      <block type="controls_whileUntil"></block>
+      <block type="controls_for">
+        <field name="VAR">i</field>
+        <value name="FROM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+      <block type="controls_forEach"></block>
+      <block type="controls_flow_statements"></block>
+    </category>
+    <category name="Matematika" colour="%{BKY_MATH_HUE}">
+      <block type="math_number">
+        <field name="NUM">123</field>
+      </block>
+      <block type="math_arithmetic"></block>
+      <block type="math_single"></block>
+      <block type="math_trig"></block>
+      <block type="math_constant"></block>
+      <block type="math_number_property"></block>
+      <block type="math_round"></block>
+      <block type="math_on_list"></block>
+      <block type="math_modulo"></block>
+      <block type="math_constrain">
+        <value name="LOW">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="HIGH">
+          <block type="math_number">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+      <block type="math_random_int">
+        <value name="FROM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+      <block type="math_random_float"></block>
+      <block type="math_atan2"></block>
+    </category>
+    <category name="Tabele" colour="%{BKY_LISTS_HUE}">
+      <block type="lists_create_empty"></block>
+      <block type="lists_create_with"></block>
+      <block type="lists_repeat">
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_length"></block>
+      <block type="lists_isEmpty"></block>
+      <block type="lists_indexOf"></block>
+      <block type="lists_getIndex"></block>
+      <block type="lists_setIndex"></block>
+    </category>
+    <sep></sep>
+    <category name="Spremenljivke" custom="VARIABLE" colour="%{BKY_VARIABLES_HUE}">
+    </category>
+    <category name="Funkcije" custom="PROCEDURE" colour="%{BKY_PROCEDURES_HUE}">
+    </category>
+    <sep></sep>
+    <category name="Knjižnica" expanded="true">
+      <category name="Randomize">
+        <block type="procedures_defnoreturn">
+          <mutation>
+            <arg name="list"></arg>
+          </mutation>
+          <field name="NAME">randomize</field>
+          <statement name="STACK">
+            <block type="controls_for" inline="true">
+              <field name="VAR">x</field>
+              <value name="FROM">
+                <block type="math_number">
+                  <field name="NUM">1</field>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="lists_length" inline="false">
+                  <value name="VALUE">
+                    <block type="variables_get">
+                      <field name="VAR">list</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <field name="NUM">1</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="variables_set" inline="false">
+                  <field name="VAR">y</field>
+                  <value name="VALUE">
+                    <block type="math_random_int" inline="true">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="lists_length" inline="false">
+                          <value name="VALUE">
+                            <block type="variables_get">
+                              <field name="VAR">list</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <field name="VAR">temp</field>
+                      <value name="VALUE">
+                        <block type="lists_getIndex" inline="true">
+                          <mutation statement="false" at="true"></mutation>
+                          <field name="MODE">GET</field>
+                          <field name="WHERE">FROM_START</field>
+                          <value name="AT">
+                            <block type="variables_get">
+                              <field name="VAR">y</field>
+                            </block>
+                          </value>
+                          <value name="VALUE">
+                            <block type="variables_get">
+                              <field name="VAR">list</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="lists_setIndex" inline="false">
+                          <value name="AT">
+                            <block type="variables_get">
+                              <field name="VAR">y</field>
+                            </block>
+                          </value>
+                          <value name="LIST">
+                            <block type="variables_get">
+                              <field name="VAR">list</field>
+                            </block>
+                          </value>
+                          <value name="TO">
+                            <block type="lists_getIndex" inline="true">
+                              <mutation statement="false" at="true"></mutation>
+                              <field name="MODE">GET</field>
+                              <field name="WHERE">FROM_START</field>
+                              <value name="AT">
+                                <block type="variables_get">
+                                  <field name="VAR">x</field>
+                                </block>
+                              </value>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <field name="VAR">list</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="lists_setIndex" inline="false">
+                              <value name="AT">
+                                <block type="variables_get">
+                                  <field name="VAR">x</field>
+                                </block>
+                              </value>
+                              <value name="LIST">
+                                <block type="variables_get">
+                                  <field name="VAR">list</field>
+                                </block>
+                              </value>
+                              <value name="TO">
+                                <block type="variables_get">
+                                  <field name="VAR">temp</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </category>
+      <category name="Jabberwocky">
+        <block type="text_print">
+          <value name="TEXT">
+            <block type="text">
+              <field name="TEXT">'Twas brillig, and the slithy toves</field>
+            </block>
+          </value>
+          <next>
+            <block type="text_print">
+              <value name="TEXT">
+                <block type="text">
+                  <field name="TEXT">  Did gyre and gimble in the wabe:</field>
+                </block>
+              </value>
+              <next>
+                <block type="text_print">
+                  <value name="TEXT">
+                    <block type="text">
+                      <field name="TEXT">All mimsy were the borogroves,</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="text_print">
+                      <value name="TEXT">
+                        <block type="text">
+                          <field name="TEXT">  And the mome raths outgrabe.</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="text_print">
+          <value name="TEXT">
+            <block type="text">
+              <field name="TEXT">"Beware the Jabberwock, my son!</field>
+            </block>
+          </value>
+          <next>
+            <block type="text_print">
+              <value name="TEXT">
+                <block type="text">
+                  <field name="TEXT">  The jaws that bite, the claws that catch!</field>
+                </block>
+              </value>
+              <next>
+                <block type="text_print">
+                  <value name="TEXT">
+                    <block type="text">
+                      <field name="TEXT">Beware the Jubjub bird, and shun</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="text_print">
+                      <value name="TEXT">
+                        <block type="text">
+                          <field name="TEXT">  The frumious Bandersnatch!"</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </category>
+    </category>
+  </xml>
+
+
+
+<div id="blockly-div" style="height: 480px; width: 400px;"></div>
+
+
+<script>
+  var workspace = Blockly.inject('blocklyDiv',
+      {toolbox: document.getElementById('toolbox'),
+      zoom:
+         {controls: true,
+          wheel: true,
+          startScale: 1.0,
+          maxScale: 3,
+          minScale: 0.3,
+          scaleSpeed: 1.2},
+     trashcan: true
+	});
+
+  
+  function myUpdateFunction(event) {
+  var code = Blockly.JavaScript.workspaceToCode(workspace);
+  document.getElementById('textarea').value = code;
+  
+}
+workspace.addChangeListener(myUpdateFunction);
+
+function executingCode(){
+	var codeToExecute = document.getElementById('textarea').value;
+
+	var test = eval(codeToExecute);
+
+	console.log(codeToExecute);
+	
+}
+
+var lang= 
+
+Code.LANGUAGE_NAME = {
+  'de': 'Deutsch',
+  'en': 'English',
+  'pl': 'Polski',
+  'sl': 'Slovenščina',
+
+};
+
+
+</script>
