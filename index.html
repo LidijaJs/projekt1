@@ -9,11 +9,16 @@
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+    <link rel="stylesheet" href="lib/codemirror.css">
+	<script src="lib/codemirror.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
     <script src="google-blockly/blockly_compressed.js"></script>
     <script src="google-blockly/javascript_compressed.js"></script>
     
-
-
    
 	<!-- <script src="google-blockly/blocks_compressed.js"></script> -->
 	<script src="google-blockly/msg/js/sl.js"></script>
@@ -32,12 +37,26 @@
   </head>
 
   <body>
+  	<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">JavaScript with blockly</li>
+     
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+<div class="grid-x grid-margin-x">
+ <div class="cell medium-2 large-2">
 
-  	<div class="grid-x grid-margin-x">
-  		 <div class="cell medium-2 large-2">
   			
   				 
-    <ul class="vertical menu columns large-2 medium-2 align-left ">
+  <ul class="vertical menu columns large-2 medium-2 align-left ">
   <li><a href="#">One</a></li>
   <li><a href="#">Two</a></li>
   <li><a href="#">Three</a></li>
@@ -45,24 +64,42 @@
 </ul>
 </div>
 
-<div class="cell large-7 medium-7">
+
+<div class="cell large-9 medium-9 align-left">
+<div class="grid-x grid-margin-x">
+<div class="cell large-12 medium-12">	
 <p>
-	Kaj je Lorem Ipsum?
-Lorem Ipsum je slepi tekst, ki se uporablja pri razvoju tipografij in pri pripravi za tisk. Lorem Ipsum je v uporabi že več kot petsto let saj je to kombinacijo znakov neznani tiskar združil v vzorčno knjigo že v začetku 16. stoletja. To besedilo pa ni zgolj preživelo pet stoletij, temveč se je z malenkostnimi spremembami uspešno uveljavilo tudi v elektronskem namiznem založništvu. Na priljubljenosti je Lorem Ipsum pridobil v sedemdesetih letih prejšnjega stoletja, ko so na trg lansirali Letraset folije z Lorem Ipsum odstavki. V zadnjem času se Lorem Ipsum pojavlja tudi v priljubljenih programih za namizno založništvo kot je na primer Aldus PageMaker.
+
+porabi že več kot petsto let saj je to kombinacijo znakov neznani tiskar združil v vzorčno knjigo že v začetku 16. stoletja. To besedilo pa ni zgolj preživelo pet stoletij, temveč se je z malenkostnimi spremembami uspeš	Kaj je Lorem Ipsum?
+Lorem Ipsum je slepi tekst, ki se uporablja pri razvoju tipografij in pri pripravi za tisk. Lorem Ipsum je v uno uveljavilo tudi v elektronskem namiznem založništvu. Na priljubljenosti je Lorem Ipsum pridobil v sedemdesetih letih prejšnjega stoletja, ko so na trg lansirali Letraset folije z Lorem Ipsum odstavki. V zadnjem času se Lorem Ipsum pojavlja tudi v priljubljenih programih za namizno založništvo kot je na primer Aldus PageMaker.
 </p>
-<div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
-</div>
-<input type="button" id="codeToString" onClick="executingCode();"> 
-
-<input type="text" id="textarea" name="name" required
-       minlength="6" maxlength="6" size="6">
-
-
 </div>
 
+<div class="cell large-7 medium-7 align-left">
+<div id="blocklyDiv" style="height: 500px; width: 600px">
+</div>
+</div>
+<div class="cell large-5 medium-5 align-left">
+	<input value="Zaženi" class="button" type="button" id="codeToString" onClick="executingCode();"> 
+	<pre id="test" class="prettyprint" style="height: 443px; font-size: 13px">
+
+	</pre>
+	<!--
+	<textarea id="textarea" style="height: 443px" cols="20"></textarea>
+	-->
+</div>
 
 
 
+
+
+<div>
+
+   </div>
+
+</div>
+</div>
+</div>
   </body>
 </html>
 
@@ -410,10 +447,18 @@ Lorem Ipsum je slepi tekst, ki se uporablja pri razvoju tipografij in pri pripra
      trashcan: true
 	});
 
+/*
+  var editor = CodeMirror.fromTextArea(textarea, {
+    lineNumbers: true
+
+  });
+  */
+
   
   function myUpdateFunction(event) {
   var code = Blockly.JavaScript.workspaceToCode(workspace);
-  document.getElementById('textarea').value = code;
+  //document.getElementById('textarea').value = code;
+  $('#test').html(PR.prettyPrintOne(code));
   
 }
 workspace.addChangeListener(myUpdateFunction);
@@ -427,8 +472,8 @@ function executingCode(){
 	
 }
 
-var lang= 
 
+/*
 Code.LANGUAGE_NAME = {
   'de': 'Deutsch',
   'en': 'English',
@@ -436,6 +481,7 @@ Code.LANGUAGE_NAME = {
   'sl': 'Slovenščina',
 
 };
+*/
 
 
 </script>
