@@ -435,6 +435,7 @@ Lorem Ipsum je slepi tekst, ki se uporablja pri razvoju tipografij in pri pripra
 
 
 <script>
+  var code = '';
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox'),
       zoom:
@@ -455,8 +456,8 @@ Lorem Ipsum je slepi tekst, ki se uporablja pri razvoju tipografij in pri pripra
   */
 
   
-  function myUpdateFunction(event) {
-  var code = Blockly.JavaScript.workspaceToCode(workspace);
+function myUpdateFunction(event) {
+  code = Blockly.JavaScript.workspaceToCode(workspace);
   //document.getElementById('textarea').value = code;
   $('#test').html(PR.prettyPrintOne(code));
   
@@ -464,11 +465,8 @@ Lorem Ipsum je slepi tekst, ki se uporablja pri razvoju tipografij in pri pripra
 workspace.addChangeListener(myUpdateFunction);
 
 function executingCode(){
-	var codeToExecute = document.getElementById('textarea').value;
 
-	var test = eval(codeToExecute);
-
-	console.log(codeToExecute);
+	eval(code);
 	
 }
 
