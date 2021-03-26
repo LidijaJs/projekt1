@@ -53,15 +53,8 @@
 </div>
 <div class="grid-x grid-margin-x">
  <div class="cell medium-2 large-2">
-
-  			
-  				 
-<ul class="vertical menu columns large-2 medium-2 align-left ">
-  <li><a href="index.html">Spremenljivke</a></li>
-  <li><a href="zanke.html">Zanke</a></li>
-  <li><a href="#">Three</a></li>
-  <li><a href="#">Four</a></li>
-</ul>
+  <side-menu>
+  </side-menu>
 </div>
 
 
@@ -437,54 +430,5 @@ Lorem Ipsum je slepi tekst, ki se uporablja pri razvoju tipografij in pri pripra
 
 <div id="blockly-div" style="height: 480px; width: 400px;"></div>
 
-
-<script>
-  var code = '';
-  var workspace = Blockly.inject('blocklyDiv',
-      {toolbox: document.getElementById('toolbox'),
-      zoom:
-         {controls: true,
-          wheel: true,
-          startScale: 1.0,
-          maxScale: 3,
-          minScale: 0.3,
-          scaleSpeed: 1.2},
-     trashcan: true
-	});
-
-/*
-  var editor = CodeMirror.fromTextArea(textarea, {
-    lineNumbers: true
-
-  });
-  */
-
-  
-function myUpdateFunction(event) {
-  code = Blockly.JavaScript.workspaceToCode(workspace);
-  //document.getElementById('textarea').value = code;
-  $('#test').html(PR.prettyPrintOne(code));
-  
-}
-workspace.addChangeListener(myUpdateFunction);
-
-
-function executingCode(){
-
-	eval(code);
-	
-}
-
-
-/*
-Code.LANGUAGE_NAME = {
-  'de': 'Deutsch',
-  'en': 'English',
-  'pl': 'Polski',
-  'sl': 'Slovenščina',
-
-};
-*/
-
-
-</script>
+<script src='navigation.js'></script>
+<script src='blockly-main.js'></script>
