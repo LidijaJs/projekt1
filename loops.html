@@ -1,0 +1,284 @@
+<!doctype html>
+
+
+<html class="no-js" lang="sl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+    <link rel="stylesheet" href="lib/codemirror.css">
+	<script src="lib/codemirror.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script src="google-blockly/blockly_compressed.js"></script>
+    <script src="google-blockly/javascript_compressed.js"></script>
+    
+   
+	<!-- <script src="google-blockly/blocks_compressed.js"></script> -->
+	<script src="google-blockly/msg/js/sl.js"></script>
+    <script src="google-blockly/slomsg.js"></script>
+
+
+	<script src="google-blockly/blocks/logic.js"></script>
+	<script src="google-blockly/blocks/loops.js"></script>
+	<script src="google-blockly/blocks/math.js"></script>
+	<script src="google-blockly/blocks/text.js"></script>
+	<script src="google-blockly/blocks/lists.js"></script>
+	<script src="google-blockly/blocks/colour.js"></script>
+	<script src="google-blockly/blocks/variables.js"></script>
+	<script src="google-blockly/blocks/procedures.js"></script>
+
+  </head>
+
+  <body>
+  	<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">JavaScript with blockly</li>
+     
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+<div class="grid-x grid-margin-x">
+ <div class="cell medium-2 large-2">
+  <side-menu>
+  </side-menu>
+</div>
+
+
+<div class="cell large-9 medium-9 align-left">
+<div class="grid-x grid-margin-x">
+<div class="cell large-12 medium-12">
+<h3>Loops</h3>	
+<div id="exercises">
+    
+    <p id="1">
+        <b>Exercise 1.</b>
+        <br/>
+        Create a for loop that runs from 0 to 9.
+    </p>
+    <p id="2" hidden>
+        <b>Exercise 2.</b>
+        <br/>
+        Create a for loop that will print all even numbers from 0 to 25.
+    </p>
+    <p id="3" hidden>
+        <b>Exercise 3.</b>
+        <br/>
+        Create a for loop that will sum all numbers from 0 to 10.
+    </p>
+    <p id="4" hidden>
+        <b>Exercise 4.</b>
+        <br/>
+        Create a while loop that runs from 0 to 9.
+    </p>
+    <p id="5" hidden>
+        <b>Exercise 5.</b>
+        <br/>
+        Create a while loop that will print all even numbers from 0 to 25.
+    </p>
+    <p id="6" hidden>
+        <b>Exercise 6.</b>
+        <br/>
+        Create a while loop that will sum all numbers from 0 to 10.
+    </p>
+    
+</div>
+<button type="button" class="button" onclick="exrsPrev()">
+    previous
+</button>
+<button type="button" class="button" onclick="exrsNext()">
+    next
+</button>
+</div>
+
+
+<div class="cell large-7 medium-12 small-12">
+<div id="blocklyDiv" style="height: 500px; width: auto">
+</div>
+</div>
+<div class="cell large-5 medium-12 small-12 align-right">
+	<input value="Zaženi" class="button" type="button" id="codeToString" onClick="executingCode();"> 
+	<pre id="code-area" class="prettyprint" style="height: 443px; font-size: 13px">
+
+	</pre>
+	<!--
+	<textarea id="textarea" style="height: 443px" cols="20"></textarea>
+	-->
+
+</div>
+
+
+
+
+
+<div>
+
+   </div>
+
+</div>
+</div>
+</div>
+  </body>
+</html>
+
+<!--<xml id="toolbox" style="display: none">
+  <category name="Logic" colour="210"> name:</category>
+  <category name="Loops" colour="120">...</category>
+  <category name="Math" colour="230">...</category>
+  <category name="Colour" colour="20">...</category>
+  <block type="controls_if"></block>
+  <block type="controls_repeat_ext"></block>
+  <block type="logic_compare"></block>
+  <block type="math_number"></block>
+  <block type="math_arithmetic"></block>
+  <block type="text"></block>
+  <block type="text_print"></block>
+</xml> -->
+
+ <xml id="toolbox" style="display: none">
+    <category name="Pogoji" colour="%{BKY_LOGIC_HUE}">
+      <category name="Če">
+        <block type="controls_if"></block>
+        <block type="controls_if">
+          <mutation else="1"></mutation>
+        </block>
+        <block type="controls_if">
+          <mutation elseif="1" else="1"></mutation>
+        </block>
+      </category>
+      <category name="Boolean" colour="%{BKY_LOGIC_HUE}">
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_null"></block>
+        <block type="logic_ternary"></block>
+      </category>
+    </category>
+    <category name="Zanke" colour="%{BKY_LOOPS_HUE}">
+      <block type="controls_repeat_ext">
+        <value name="TIMES">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+      <block type="controls_whileUntil"></block>
+      <block type="controls_for">
+        <field name="VAR">i</field>
+        <value name="FROM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+      <block type="controls_forEach"></block>
+      <block type="controls_flow_statements"></block>
+    </category>
+    <category name="Matematika" colour="%{BKY_MATH_HUE}">
+      <block type="math_number">
+        <field name="NUM">123</field>
+      </block>
+      <block type="math_arithmetic"></block>
+      <block type="math_single"></block>
+      <block type="math_trig"></block>
+      <block type="math_constant"></block>
+      <block type="math_number_property"></block>
+      <block type="math_round"></block>
+      <block type="math_on_list"></block>
+      <block type="math_modulo"></block>
+      <block type="math_constrain">
+        <value name="LOW">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="HIGH">
+          <block type="math_number">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+      <block type="math_random_int">
+        <value name="FROM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+      <block type="math_random_float"></block>
+      <block type="math_atan2"></block>
+    </category>
+    <category name="Tabele" colour="%{BKY_LISTS_HUE}">
+      <block type="lists_create_empty"></block>
+      <block type="lists_create_with"></block>
+      <block type="lists_repeat">
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_length"></block>
+      <block type="lists_isEmpty"></block>
+      <block type="lists_indexOf"></block>
+      <block type="lists_getIndex"></block>
+      <block type="lists_setIndex"></block>
+    </category>
+    <sep></sep>
+    <category name="Spremenljivke" custom="VARIABLE" colour="%{BKY_VARIABLES_HUE}">
+    </category>
+    <category name="Funkcije" custom="PROCEDURE" colour="%{BKY_PROCEDURES_HUE}">
+    </category>
+    <sep></sep>
+    <category name="Knjižnica" expanded="true">
+      <category name="Napisi">
+        <block type="text_print">
+          <value name="TEXT">
+            <block type="text">
+              <field name="TEXT">"Tvoje napisi"</field>
+            </block>
+          </value>
+        </block>
+      </category>
+    </category>
+  </xml>
+
+  <xml id="workspaceInitialContent" style="display: none">
+    
+    <block type="controls_if"></block>
+ 
+  </xml>
+
+<div id="blockly-div" style="height: 480px; width: 400px;"></div>
+
+<script src='navigation.js'></script>
+<script src='blockly-main.js'></script>

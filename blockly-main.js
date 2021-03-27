@@ -10,6 +10,8 @@ var workspace = Blockly.inject('blocklyDiv',
         scaleSpeed: 1.2},
    trashcan: true
 });
+//xmlContent = document.getElementById("workspaceInitialContent");
+//Blockly.Xml.domToWorkspace(xmlContent, workspace);
 
 /*
 var editor = CodeMirror.fromTextArea(textarea, {
@@ -17,16 +19,12 @@ var editor = CodeMirror.fromTextArea(textarea, {
 
 });
 */
-
-
 function myUpdateFunction(event) {
-code = Blockly.JavaScript.workspaceToCode(workspace);
-//document.getElementById('textarea').value = code;
-$('#test').html(PR.prettyPrintOne(code));
+  code = Blockly.JavaScript.workspaceToCode(workspace);
+  $('#code-area').html(PR.prettyPrintOne(code));
 
 }
 workspace.addChangeListener(myUpdateFunction);
-
 
 function executingCode(){
 
