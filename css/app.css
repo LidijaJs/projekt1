@@ -1,0 +1,40 @@
+.main-section{
+    position: relative;
+    bottom:-138px;
+    background-color: #4A4A4A;
+    padding:40px;
+    margin-top:80px !important;
+    font-family: 'Archivo Narrow', sans-serif;
+  }
+  .title h4,.search h4{
+    font-family: 'Archivo Narrow', sans-serif;
+    color:#d2d2d2;
+    margin-bottom:15px;
+    margin-top: 10px;
+  }
+  .title p{
+    color:#a5a5a5;
+  }
+  .search{
+    position:relative;
+    margin-top: 20px;
+  }
+  .search i{
+    position: absolute;
+    top:0px;
+    font-size: 3rem;
+    color: #8a8a8a;
+    right:10px;
+    transform: rotate(0deg);
+    transition:0.5s;
+  }
+  .search i:hover{
+    color:#d2d2d2;
+    font-size:3.5rem;
+    transform: rotate(360deg);
+  }
+  .footer{
+    text-align: center;
+    color:#fff;
+    margin:10px 0px -20px 0px;
+  }
