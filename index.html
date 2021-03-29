@@ -40,14 +40,14 @@
   	<div class="top-bar">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">JavaScript with blockly</li>
+      <li class="menu-text">JavaScript z Blocklyjem</li>
      
     </ul>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
       <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
+      <li><button type="button" class="button">Išči</button></li>
     </ul>
   </div>
 </div>
@@ -61,45 +61,47 @@
 <div class="cell large-9 medium-9 align-left">
 <div class="grid-x grid-margin-x">
 <div class="cell large-12 medium-12">
-<h3>Variables</h3>	
+<h3>Spremenljivke</h3>	
 
 <p>
-JavaScript variables are containers for storing data values. 
-Like a number we might use in a sum, or a string that we might use as part of a sentence. 
-But one special thing about variables is that their contained values can change,
-Another special thing about variables is that they can contain just about anything — not just strings and numbers.
-Variables can also contain complex data and even entire functions to do amazing things. You'll learn more about this as you go along.
+Vrednosti so podatki v programu, ki jih v obliki bitov shranjujemo v delovni pomnilnik da jih lahko kasneje uporabimo.  Vsaka vrednosti ima svoj tip in vsak tip vrednosti ima v programu drugačno vlogo. 
+Da v jeziku JavaScript ustvarimo vrednost, zadostuje, da jo pokličemo po imenu. 
+
+JavaScript spremenljivke so vsebniki za shranjevanje podatkovnih vrednosti, tako kot številka, ki jo lahko uporabimo v vsoti, ali niz, ki ga lahko uporabimo kot del stavka.
+Posebnost pri spremenljivkah je, da se njihove vsebovane vrednosti lahko spreminjajo,
+Druga posebnost spremenljivk je ta, da lahko vsebujejo skoraj vse - ne le nizov in števil.
+Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije. 
 </p>
 
 <div id="exercises">
     
     <p id="1">
-        <b>Exercise 1.</b>
+        <b>Vaja 1.</b>
         <br/>
-        Declare variable 'a' and assign to it text (string value).
+        Ustvari spremenljivko 'a' in ji dodeli tekst (string value).
     </p>
     <p id="2" hidden>
-        <b>Exercise 2.</b>
+        <b>Vaja 2.</b>
         <br/>
-        Declare variable 'a' and assign to it number value.
+        Ustvari spremenljivko 'a' in ji dodeli številsko vrednost. 
     </p>
     <p id="2" hidden>
-      <b>Exercise 3.</b>
+      <b>Vaja 3.</b>
       <br/>
-      Declare variable 'a' and 'b' (both integer types) and assign their sum to the variable 'c'.
+      Ustvari spremenljivki 'a' in 'b' (obe tipa integer) in njuno vsoto dodeli spremenljivki 'c'.
   </p>
   <p id="2" hidden>
-    <b>Exercise 4.</b>
+    <b>Vaja 4.</b>
     <br/>
-    Declare variable 'a' and 'b' (both text values) and print their sum.
+    Ustvari spremenljivki 'a' in 'b' (obe besedilnega tipa) in izpiši njuno vsoto.
 </p>
     
 </div>
 <button type="button" class="button" onclick="exrsPrev()">
-    previous
+    nazaj
 </button>
 <button type="button" class="button" onclick="exrsNext()">
-    next
+    naprej
 </button>
 </div>
 
@@ -262,7 +264,7 @@ Variables can also contain complex data and even entire functions to do amazing 
         <block type="text_print">
           <value name="TEXT">
             <block type="text">
-              <field name="TEXT">"Tvoje napisi"</field>
+              <field name="TEXT">"Tvoji napisi"</field>
             </block>
           </value>
         </block>

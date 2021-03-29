@@ -40,14 +40,14 @@
   	<div class="top-bar">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">JavaScript with blockly</li>
+      <li class="menu-text">JavaScript z Bloclyjem</li>
      
     </ul>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
       <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
+      <li><button type="button" class="button">Išči</button></li>
     </ul>
   </div>
 </div>
@@ -61,35 +61,30 @@
 <div class="cell large-9 medium-9 align-left">
 <div class="grid-x grid-margin-x">
 <div class="cell large-12 medium-12">
-<h3>Arrays</h3>	
+<h3>Nizi</h3>	
 <p>
-    Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. 
-    Neither the length of a JavaScript array nor the types of its elements are fixed. Since an array's length can change at any time, 
-    and data can be stored at non-contiguous locations in the array, JavaScript arrays are not guaranteed to be dense; this depends on 
-    how the programmer chooses to use them. In general, these are convenient characteristics; 
-    but if these features are not desirable for your particular use, you might consider using typed arrays.
+    Nizi so objekti podobni seznamom. Z njimi je možno izvajati prečne (traversal) in mutacijske operacije. 
+    Ne dolžina niza v JavaScriptu in ne tipi elementov v nizu niso fiksno določeni. Ker se lahko dolžina niza spremeni kadarkoli in se lahko shranjujejo podatki na nezapovrstnih lokacijah v nizu,  nizi v JavaScriptu niso nujno zgoščeni; od programerja je odvisno, kako jih bo uporabil. 
+    Na splošno so to uporabne lastnosti nizov; vedar če te niso zaženjene za našo uporabo, je vredno razmisliti o uporabi zapisanih nizov (typed arrays).
 </p>
 <p>
-    Arrays cannot use strings as element indexes (as in an associative array) but must use integers.
-    Setting or accessing via non-integers using bracket notation (or dot notation) will not set or retrieve an element from the array list itself, 
-    but will set or access a variable associated with that array's object property collection. 
-    The array's object properties and list of array elements are separate, and the array's traversal and mutation operations cannot be applied to these named properties.
-</p>
+    Nizi ne morajo uporabiti tabel (strings) kot indeksov elementov, pač pa se zato uporablja cela števila (integer) 
+    Z označevanjem ali dostopanjem elementov z neštevili, ne bomo nastavili ali pridobili elementa iz niza samega. S tem bomo nastavili ali dobili dostop do spremenljivke, ki je povezana z (that array's object property collection). 
+    Lastnosti objektov v nizu in tabela elementov v nizu sta ločena. Mutacijske in prečne operacije ne morajo biti uporabljene na teh lastnostih. 
 <div id="exercises">
     <p id="1">
-        <b>Exercise 1.</b>
+        <b>Vaja 1.</b>
         <br/>
-        Create two elements array and assign value to each element.
-    </p>
+        Ustvari dva niza in vsakemu dodaj vsaj eno vrednost. 
     <p id="2" hidden>
-        <b>Exercise 2.</b>
+        <b>Vaja 2.</b>
         <br/>
-       Create two elements array and print its length.
+       Ustvari niz z dvema elementoma in izpiši njuno dolžino. 
     </p>
     <p id="3" hidden>
-        <b>Exercise 3.</b>
+        <b>Vaja 3.</b>
         <br/>
-        Create two elements array and remove its last element.
+        Ustvari niz z dvema elementoma in nato izbriši zadnji element. 
 
         
     </p>
@@ -97,10 +92,10 @@
     
 </div>
 <button type="button" class="button" onclick="exrsPrev()">
-    previous
+    nazaj
 </button>
 <button type="button" class="button" onclick="exrsNext()">
-    next
+    naprej
 </button>
 </div>
 
