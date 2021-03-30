@@ -58,9 +58,7 @@ function setImage(chapter){
     }
   }
 
-  console.log(exNumber);
   dir =  src + exNumber + ".png";
-  console.log(dir);
   img_src.setAttribute('src', dir);
 
 }
