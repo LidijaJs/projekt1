@@ -4,7 +4,7 @@ var code = '';
 var exrMap = {
   "variables": "assets/img/var_exrs",
   "loops":  "assets/img/loops_exrs",
-  "conditions":  "assets/img/conditions_exrs",
+  "conditions":  "assets/img/con_exrs",
   "arrays":  "assets/img/arrays_exrs",
   "functions":  "assets/img/functions_exrs",
 
