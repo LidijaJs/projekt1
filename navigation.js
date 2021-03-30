@@ -14,6 +14,16 @@ fetch("./side-menu.html")
     document.querySelector("footer").innerHTML = data;
   });
 
+
+function hidde_solution(){
+    var disp = document.getElementById('solution');
+    var dispButton =  document.getElementById('solution_button');
+ 
+    disp.setAttribute('hidden', true);
+    dispButton.setAttribute('value', 'Rešitev')
+
+}
+
 function exrsPrev(){
 
     var ex = document.getElementById("exercises");
@@ -28,7 +38,10 @@ function exrsPrev(){
         }
         
     };
+
+    hidde_solution();
 }
+
 
 function exrsNext(){
 
@@ -43,5 +56,6 @@ function exrsNext(){
                 break;
         } 
     };
+    hidde_solution();
    
  }

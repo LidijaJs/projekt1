@@ -85,12 +85,12 @@ Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije.
         <br/>
         Ustvari spremenljivko 'a' in ji dodeli številsko vrednost. 
     </p>
-    <p id="2" hidden>
+    <p id="3" hidden>
       <b>Vaja 3.</b>
       <br/>
       Ustvari spremenljivki 'a' in 'b' (obe tipa integer) in njuno vsoto dodeli spremenljivki 'c'.
   </p>
-  <p id="2" hidden>
+  <p id="4" hidden>
     <b>Vaja 4.</b>
     <br/>
     Ustvari spremenljivki 'a' in 'b' (obe besedilnega tipa) in izpiši njuno vsoto.
@@ -110,8 +110,11 @@ Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije.
 <div id="blocklyDiv" style="height: 500px; width: auto">
 </div>
 </div>
+
 <div class="cell large-5 medium-12 small-12 align-right">
 	<input value="Zaženi" class="button" type="button" id="codeToString" onClick="executingCode();"> 
+  <input id="solution_button" value="Rešitev" class="button" type="button" onClick="showSolution('variables');"> 
+
 	<pre id="code-area" class="prettyprint" style="height: 443px; font-size: 13px">
 
 	</pre>
@@ -119,6 +122,11 @@ Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije.
 	<textarea id="textarea" style="height: 443px" cols="20"></textarea>
 	-->
 
+</div>
+
+<div id="solution" hidden class="cell large-12 medium-12 small-12 align-right">
+  <p>Resitev </p>
+  <img id="solution-img" src="assets/img/var_exrs1.png">
 </div>
 
 
@@ -129,7 +137,6 @@ Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije.
 
    </div>
 
-</div>
 </div>
 </div>
   
@@ -277,6 +284,9 @@ Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije.
     <block type="controls_if"></block>
  
   </xml>
+
+  
+</div>
 
 <footer>
 
