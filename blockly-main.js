@@ -39,7 +39,7 @@ workspace.addChangeListener(myUpdateFunction);
 
 function executingCode(){
 
-eval(code);
+  eval(code);
 
 }
 
@@ -70,7 +70,7 @@ function showSolution(chapter){
   var dispButton =  document.getElementById('solution_button');
   if(disp.hasAttribute('hidden')){  
     disp.removeAttribute('hidden');
-    dispButton.setAttribute('value', 'Skriti Rešitev')
+    dispButton.setAttribute('value', 'Skrij Rešitev')
     
   }else{
     disp.setAttribute('hidden', true);
