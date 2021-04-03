@@ -39,7 +39,11 @@ workspace.addChangeListener(myUpdateFunction);
 
 function executingCode(){
 
-eval(code);
+  if(typeof(eval(code)) =='string'){
+    window.alert("Gooooood");
+  }else{
+    window.alert("no stupi motherfucker, you should study psychology insted of programmin!");
+  }
 
 }
 
