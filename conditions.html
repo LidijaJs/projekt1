@@ -60,7 +60,7 @@
 
 <div class="cell large-9 medium-9 align-left">
 <div class="grid-x grid-margin-x">
-<div class="cell large-12 medium-12">
+<div class="cell large-6 medium-12">
 <h3>Pogojni stavki</h3>	
 <p>
     Kadar pišemo programe se pogosto zgodu, da želimo izvesti različna dejanja za različne odločitve. Da to storimo lahko v naši kodi uporabimo pogojne stavke.<br>
@@ -81,34 +81,32 @@ Sintaksa: <br>
    // blok kode, ki se izvede, če je pogoj resničen <br>
 } <br>
 Upoštevajte, da stavek "če" zapišemo z malimi črkami. Velike črke (Če ali ČE) bodo ustvarile napako.<br><br>
+Primer:<br>
+Če je ura manj kot 18:00, pozdravite "Dober dan":<br><br>
 
+če (ura <18) {<br>
+   pozdrav = "Dober dan";<br>
+}<br><br>
+Rezultat pozdrava bo:<br>
+Dober dan<br><br>
 <b>Izjava sicer</b><br>
 Z izjavo sicer določite blok kode, ki naj se izvede, če je pogoj neresničen.<br><br>
 če (pogoj) {<br>
    // blok kode, ki se izvede, če je pogoj resničen<br>
 } sicer {<br>
    // blok kode, ki se izvede, če je pogoj neresničen<br>
-}<br><br>
-
-<b>Izjava sicer če</b><br>
-Z izjavo sicer če določite nov pogoj, če je prvi pogoj napačen.<br>
-Sintaksa: <br><br>
-če (pogoj1) {<br>
-   // blok kode, ki se izvede, če je pogoj1 resničen<br>
-} sicer če (pogoj2) {<br>
-   // blok kode, ki se izvede, če je pogoj1 neresničen in pogoj2 resničen<br>
-} sicer {<br>
-   // blok kode, ki se izvede, če je pogoj1 neresničen in pogoj2 neresničen<br><br>
+}
+<br><br>
 </p>
 <div id="exercises">
     
     <p id="1">
-        <b>Vaja 1.</b>
+        <b>Vaja 1/2.</b>
         <br/>
         Napiši program, ki primerja dve spremenljivki 'a' in 'b' in izpiše večjo. 
     </p>
     <p id="2" hidden>
-        <b>Vaja 2.</b>
+        <b>Vaja 2/2.</b>
         <br/>
        Napiši program, ki bo izpisal 'neparno', če je spremenljivka 'a' liho število in  'parno' če je spremenljivka'a' sodo število. 
     </p>
@@ -122,6 +120,42 @@ Sintaksa: <br><br>
 </button>
 </div>
 
+<div class="cell large-6 medium-12">
+<br><br>
+Primer:<br>
+Če je ura manj kot 18, ustvarite pozdrav "Dober dan", drugače "Dober večer":<br><br>
+
+če (ura <18) {<br>
+   pozdrav = "Dober dan";<br>
+} sicer {<br>
+   pozdrav = "Dober večer";<br>
+}<br>
+Rezultat pozdrava bo: <br>
+Dober dan<br><br>
+
+<b>Izjava sicer če</b><br>
+Z izjavo sicer če določite nov pogoj, če je prvi pogoj napačen.<br>
+Sintaksa: <br><br>
+če (pogoj1) {<br>
+   // blok kode, ki se izvede, če je pogoj1 resničen<br>
+} sicer če (pogoj2) {<br>
+   // blok kode, ki se izvede, če je pogoj1 neresničen in pogoj2 resničen<br>
+} sicer {<br>
+   // blok kode, ki se izvede, če je pogoj1 neresničen in pogoj2 neresničen<br><br>
+Primer:<br>
+Če je ura manj od 10:00, ustvarite pozdrav "Dobro jutro", če ni, ura pa je vseeno manj kot 20:00, ustvarite pozdrav "Dober dan", sicer pa "Dober večer":<br><br>
+
+če (čas <10) {<br>
+   pozdrav = "Dobro jutro";<br>
+} sicer če (čas <20) {<br>
+   pozdrav = "Dober dan";<br>
+} sicer {<br>
+   pozdrav = "Dober večer";<br>
+}<br><br>
+Rezultat pozdrava bo:<br>
+Dober dan<br><br>
+
+</div>
 
 <div class="cell large-7 medium-12 small-12">
 <div id="blocklyDiv" style="height: 500px; width: auto">

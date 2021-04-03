@@ -60,38 +60,106 @@
 
 <div class="cell large-9 medium-9 align-left">
 <div class="grid-x grid-margin-x">
-<div class="cell large-12 medium-12">
+<div class="cell large-6 medium-12">
 <h3>Zanke</h3>
 <p>
-    JavaScript zanke se uporabljajo za večkratno izvajanje bloka kode - dokler ni izpolnjen določen pogoj. Ko razvijalci govorijo o ponavljanju (iteration) ali ponavljanju (iterating over), na primer, polja, je to enako kot zanka. 
-     
-    JavaScript ponuja več možnosti za večkratni zagon bloka kode, vključno z "while", "do while", "for" in "for-in".
+    
+<br>	
+Zanke so priročne, če želite vedno znova zagnati isto kodo, vsakič z drugo vrednostjo. Pogosto se pri delu z nizi zgodi naslednje:<br><br>
 
-</p>	
+Namesto pisanja:<br>
+besedilo + = avtomobili [0] + "...";<br>
+besedilo + = avtomobili [1] + "...";<br>
+besedilo + = avtomobili [2] + "...";<br>
+besedilo + = avtomobili [3] + "...";<br>
+besedilo + = avtomobili [4] + "...";<br>
+besedilo + = avtomobili [5] + "...";<br>
+Lahko napišete:<br>
+var i;<br>
+za (i = 0; i <cars.length; i ++) {<br>
+   besedilo + = avtomobili [i] + "...";<br>
+}<br><br>
+
+<b>Različne vrste zank</b><br>
+JavaScript podpira različne vrste zank:<br>
+
+for - večkrat ponovi blok kode<br>
+for / in - zanke skozi lastnosti predmeta<br>
+for / of - zanke skozi vrednosti iterabilnega predmeta<br>
+while - se vrti skozi blok kode, medtem ko je določen pogoj resničen<br>
+do / while - tudi zanke skozi blok kode, medtem ko je določen pogoj resničen<br><br>
+
+<b>Za zanka</b><br>
+Zanka for ima naslednjo sintakso:<br><br>
+za (stavek 1; stavek 2; stavek 3) {<br>
+  // blok kode, ki se izvede<br>
+}<br><br>
+Stavek 1 se izvede (enkrat) pred izvajanjem bloka kode.<br>
+
+Stavek 2 opredeljuje pogoj za izvajanje kodnega bloka.<br>
+
+Stavek 3 se izvede (vsakič) po izvedbi bloka kode.<br><br>
+
+Primer:<br>
+za (i = 0; i <5; i ++) {<br>
+  text + = "Število je" + i + "...";<br>
+}<br><br>
+Iz zgornjega primera lahko preberete:<br>
+Izjava 1 nastavi spremenljivko pred zagonom zanke (var i = 0).<br>
+Izjava 2 opredeljuje pogoj za zagon zanke (mora biti manjša od 5).<br>
+Izjava 3 poveča vrednost (i ++) vsakič, ko se izvede blok kode v zanki.<br><br>
+
+<b>Stavek 1</b><br>
+Običajno boste uporabili stavek 1 za inicializacijo spremenljivke, uporabljene v zanki (i = 0).
+Temu ni vedno tako, JavaScriptu je vseeno. Izjava 1 ni obvezna.<br>
+
+V stavku 1 (ločeno z vejico) lahko sprožite veliko vrednosti:<br><br>
+
+Primer:<br>
+za (i = 0, len = cars.length, text = ""; i <len; i ++) {<br>
+   besedilo + = avtomobili [i] + "...";<br>
+}<br><br>
+Izjavo 1 lahko izpustite (na primer, ko so vaše vrednosti nastavljene pred zagonom zanke):<br><br>
+
+Primer:<br>
+var i = 2;<br>
+var len = cars.length;<br>
+var text = "";<br>
+za (; i <len; i ++) {<br>
+   besedilo + = avtomobili [i] + "...";<br>
+}<br><br>
+<b>Stavek 2</b><br/>
+Stavek 2 se pogosto uporablja za oceno stanja začetne spremenljivke.
+Temu ni vedno tako, JavaScriptu je vseeno. Tudi stavek 2 je neobvezen.
+Če stavek 2 vrne true, se zanka začne znova, če vrne false, se zanka konča.
+<br/><br/>
+Če izpustite izjavo 2, morate zagotoviti zanko znotraj zanke. V nasprotnem primeru se zanka ne bo nikoli končala. To bo zrušilo vaš brskalnik.<br/><br/>
+</p>
+
 <div id="exercises">
     
     <p id="1">
-        <b>Vaja 1.</b>
+        <b>Vaja 1/5.</b>
         <br/>
         Ustvari zanko, ki teče od 0 do 9.
     </p>
     <p id="2" hidden>
-        <b>Vaja 2.</b>
+        <b>Vaja 2/5.</b>
         <br/>
         Ustvari zanko, ki bo izpisala vsa soda števila od 0 do 25.
     </p>
     <p id="3" hidden>
-        <b>Vaja 3.</b>
+        <b>Vaja 3/5.</b>
         <br/>
         Ustvari zanko, ki bo seštela vsa števila od 0 do 10. Seštevek naj se izpiše. 
     </p>
     <p id="4" hidden>
-        <b>Vaja 4.</b>
+        <b>Vaja 4/5.</b>
         <br/>
         Ustvari program z zanko while, ki izpiše vsa števila od 0 do 9.  
     </p>
     <p id="5" hidden>
-        <b>Vaja 5.</b>
+        <b>Vaja 5/5.</b>
         <br/>
         Ustvari zanko, ki bo izpisala vsa liha števila od 0 do 25. 
     </p>
@@ -104,6 +172,85 @@
 <button type="button" class="button" onclick="exrsNext()">
     naprej
 </button>
+</div>
+
+
+<div class="cell large-6 medium-12">
+  <p><br/><br/><br/>
+
+<b>Izjava 3</b><br/>
+Stavek 3 pogosto poveča vrednost začetne spremenljivke.
+Temu ni vedno tako, JavaScriptu je vseeno in stavek 3 ni obvezen.
+Izjava 3 lahko naredi karkoli, na primer negativni prirastek (i--), pozitivni prirastek (i = i + 15) ali kar koli drugega.
+Izjava 3 je lahko tudi izpuščena (na primer pri povečevanju vrednosti znotraj zanke):<br/><br/>
+
+Primer:<br/>
+var i = 0;<br/>
+var len = cars.length;<br/>
+za (; i <len;) {<br/>
+   besedilo + = avtomobili [i] + "...";<br/>
+   i ++;<br/>
+}<br/><br/>
+
+<b>Medtem ko zanka</b><br/>
+Zanka while kroži skozi blok kode, dokler je določen pogoj resničen.<br/>
+
+Sintaksa:<br/>
+medtem ko (stanje) {<br/>
+   // blok kode, ki se izvede<br/>
+}<br/>
+V naslednjem primeru se bo koda v zanki izvajala znova in znova, dokler bo spremenljivka (i) manjša od 10:<br/><br/>
+
+Primer:<br/>
+medtem ko (i <10) {<br/>
+   text + = "Število je" + i;<br/>
+   i ++;
+   }<br/><br/>
+
+<b>Zanka Do / While</b><br/>
+Zanka do / while je različica zanke while. Ta zanka bo enkrat izvedla blok kode, preden bo preverila, ali je pogoj resničen, nato bo zanko ponavljala, dokler je pogoj resničen.<br/>
+Sintaksa:<br/>
+naredi {<br/>
+   // blok kode, ki se izvede<br/>
+}<br/>
+medtem ko (stanje);<br/><br/>
+
+Spodnji primer uporablja zanko do / while. Zanka se bo vedno izvedla vsaj enkrat, tudi če je pogoj neresničen, ker se blok kode izvede pred preizkusom pogoja:<br/><br/>
+
+Primer:<br/>
+naredi {<br/>
+   text + = "Število je" + i;<br/>
+   i ++;<br/>
+}<br/>
+medtem ko (i <10);<br/><br/>
+Ne pozabite povečati spremenljivke, ki je uporabljena v pogoju, sicer se zanka ne bo nikoli končala!<br/><br/>
+
+<b>Primerjava za in medtem</b><br>
+Če ste prebrali prejšnje poglavje o zanki for, boste odkrili, da je zanka while podobna zanki for, pri čemer sta stavek 1 in stavek 3 izpuščena.<br>
+Zanka v tem primeru uporablja zanko for za zbiranje imen avtomobilov iz niza cars:<br><br>
+
+Primer:<br>
+var cars = ["BMW", "Volvo", "Saab", "Ford"];<br>
+var i = 0;<br>
+var text = "";<br><br>
+
+za (; avtomobile [i];) {<br>
+   besedilo + = avtomobili [i] + "...";<br>
+   i ++;<br>
+}<br><br>
+Zanka v tem primeru uporablja zanko while za zbiranje imen avtomobilov iz niza cars:<br><br>
+
+Primer:<br>
+var cars = ["BMW", "Volvo", "Saab", "Ford"];<br>
+var i = 0;<br>
+var text = "";<br><br>
+
+medtem ko (avtomobili [i]) {<br>
+   besedilo + = avtomobili [i] + "...";<br>
+   i ++;<br>
+}<br><br>
+
+</p>
 </div>
 
 
