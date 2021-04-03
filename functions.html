@@ -52,7 +52,7 @@
   </div>
 </div>
 <div class="grid-x grid-margin-x">
- <div class="cell medium-2 large-2">
+ <div class="cell medium-2 large-2" style="background-color:#e6e6e6;">
   <side-menu>
   </side-menu>
 </div>
@@ -60,43 +60,86 @@
 
 <div class="cell large-9 medium-9 align-left">
 <div class="grid-x grid-margin-x">
-<div class="cell large-12 medium-12">
+<div class="cell large-6 medium-12">
 <h3>Funkcije</h3>	
-<p>
-     Funkcije so eden temeljnih gradnikov v JavaScriptu.
-     Funkcija v JavaScript je podobna postopku - naboru stavkov, ki izvajajo nalogo ali izračunajo vrednost, vendar da bi bil postopek kvalificiran kot funkcija,
-     mora vzeti nekaj vhodnih podatkov in vrniti izhodne podatke, če obstaja očitno razmerje med vhodom in izhodom.
-     Če želimo uporabiti funkcijo, jo moramo definirati v obsegu, iz katerega jo želimo poklicati.
+<p> 
+<br/>
+Funkcija JavaScript je blok kode, zasnovan za izvajanje določene naloge.<br/>
 
-     Definicija funkcije (imenovana tudi izjava funkcije ali stavek funkcije) je sestavljena iz ključne besede funkcija, ki ji sledi:
-    <ul>
-        <li>Ime funkcije.</li>
-        <li>Seznam parametrov funkcije v oklepajih in ločenih z vejico.</li>
-        <li>Stavki JavaScripta v zavitih oklepajih, ki definirajo funkcijo {...}.</li>
-    </ul>
+Funkcija JavaScript se izvede, ko jo "nekaj" prikliče (pokliče).<br/><br/>
+
+Primer:<br/>
+funkcija myFunction (p1, p2) {<br/>
+   vrnitev p1 * p2; // Funkcija vrne zmnožek p1 in p2<br/>
+}<br/><br/>
+
+<b>Sintaksa funkcije JavaScript</b><br/>
+Funkcija JavaScript je definirana s ključno besedo funkcije, ki ji sledi ime, ki mu sledijo oklepaji ().<br/>
+Imena funkcij lahko vsebujejo črke, števke, podčrtaje in znake za dolar (enaka pravila kot spremenljivke).<br/>
+
+V oklepajih so lahko imena parametrov, ločena z vejicami:<br/>
+(parameter1, parameter2, ...)<br/><br/>
+
+Koda, ki jo mora funkcija izvesti, je umeščena v zavite oklepaje: {}<br/>
+
+ime funkcije (parameter1, parameter2, parameter3) {<br/>
+   // koda za izvedbo<br/>
+}<br/><br/>
+Parametri funkcije so navedeni v oklepajih () v definiciji funkcije.<br/>
+
+Argumenti funkcije so vrednosti, ki jih funkcija prejme ob njenem klicu.<br/>
+
+Znotraj funkcije se argumenti (parametri) obnašajo kot lokalne spremenljivke.<br/>
+
+Funkcija je v drugih programskih jezikih podobna postopku ali podprogramu.<br/><br/>
+
+<b>Poklic funkcije</b><br/>
+Koda znotraj funkcije se bo izvedla, ko "nekaj" prikliče (pokliče) funkcijo:<br/>
+
+Ko se zgodi dogodek (ko uporabnik klikne gumb)<br/>
+Ko je poklican (poklican) iz kode JavaScript<br/>
+Samodejno (samodejno poklicano)<br/><br/>
+
+<b>Vrnitev funkcije</b><br/>
+Ko JavaScript doseže povratni stavek, se funkcija ustavi.
+
+Če je bila funkcija priklicana iz stavka, se bo JavaScript vrnil za izvajanje kode po stavku za klicanje.
+
+Funkcije pogosto izračunajo vrnjeno vrednost. Vrnjena vrednost se "vrne" nazaj klicatelju:<br/><br/>
+
+Primer:<br/>
+Izračunajte zmnožek dveh števil in vrnite rezultat:<br/>
+
+var x = myFunction (4, 3); // Pokliče se funkcija, vrnjena vrednost se bo končala v x<br/><br/>
+
+funkcija myFunction (a, b) {<br/>
+   vrni a * b; // Funkcija vrne zmnožek a in b<br/>
+}<br/><br/>
+Rezultat v x bo: 12.<br/>
+
 </p>
 <div id="exercises">
     <p id="1">
-        <b>Vaja 1.</b>
+        <b>Vaja 1/5.</b>
         <br/>
         Ustvari funkcijo, ki bo izpisala 'Hello World'.
     </p>
     <p id="2" hidden>
-        <b>Vaja 2.</b>
+        <b>Vaja 2/5.</b>
         <br/>
         Ustvari funkcijo, kjer bosta spremenljivki 'a' in 'b' njena argumenta in bo izpisala njuno vsoto.
     <p id="3" hidden>
-        <b>Vaja 3.</b>
+        <b>Vaja 3/5.</b>
         <br/>
         Ustvari funkcijo, kjer bosta spremenljivki 'a' in 'b' njena argumenta in bo VRNILA njuno vsoto.
     </p>
     <p id="4" hidden>
-        <b>Vaja 4.</b>
+        <b>Vaja 4/5.</b>
         <br/>
         Ustvari funkcijo, kjer bosta spremenljivki 'a' in 'b' njena argumenta in bo vrnila tisto spremenljivko, ki je večja.
     </p>
     <p id="5" hidden>
-        <b>Vaja 5.</b>
+        <b>Vaja 5/5.</b>
         <br/>
         Ustvari funkcijo z argumentom 'n', ki bo izpisala vse elemente Fibonaccijevega zaporedja do 'n'.
     </p>
@@ -111,6 +154,63 @@
 </button>
 </div>
 
+<div class="cell large-6 medium-12">
+<br/><br/>
+<b>Zakaj funkcije?</b><br/>
+Kodo lahko znova uporabite: Kodo določite enkrat in jo uporabite večkrat.
+
+Isto kodo lahko večkrat uporabite z različnimi argumenti, da dobite različne rezultate.<br/><br/>
+
+Primer:<br/>
+Pretvori Fahrenheita v Celzijeve:<br/>
+
+funkcija do Celzija (Fahrenheit) {<br/>
+   povratek (5/9) * (fahrenheit-32);<br/>
+}<br/>
+document.getElementById ("demo"). innerHTML = toCelsius (77);<br/><br/>
+
+<b>() Operator prikliče funkcijo</b><br/>
+V zgornjem primeru se toCelsius sklicuje na objekt funkcije, toCelsius () pa na rezultat funkcije.
+
+Dostop do funkcije brez () bo vrnil funkcijski objekt namesto rezultata funkcije.<br/><br/>
+
+Primer:<br/>
+funkcija do Celzija (Fahrenheit) {<br/>
+   povratek (5/9) * (fahrenheit-32);<br/>
+}<br/>
+document.getElementById ("demo"). innerHTML = toCelsius;<br/><br/>
+
+<b>Funkcije, ki se uporabljajo kot spremenljive vrednosti</b><br/>
+Funkcije lahko uporabljate na enak način kot spremenljivke pri vseh vrstah formul, dodeljevanj in izračunov.<br/><br/>
+
+Primer<br/>
+Namesto da bi uporabili spremenljivko za shranjevanje vrnjene vrednosti funkcije:<br/>
+
+var x = do Celzija (77);<br/>
+var text = "Temperatura je" + x + "Celzija";<br/>
+Funkcijo lahko uporabite neposredno kot spremenljivko:<br/><br/>
+
+var text = "Temperatura je" + do Celzija (77) + "Celzija";<br/><br/>
+
+<b>Lokalne spremenljivke</b><br/>
+Spremenljivke, prijavljene v funkciji JavaScript, postanejo LOKALNE za funkcijo.
+
+Do lokalnih spremenljivk je mogoče dostopati samo znotraj funkcije.<br/><br/>
+
+Primer:<br/>
+// koda tukaj NE more uporabljati avtoIme<br/>
+
+funkcija myFunction () {<br/>
+   var avtoIme = "Volvo";<br/>
+   // koda tukaj LAHKO uporabite carName<br/>
+}<br/>
+
+// koda tukaj NE more uporabljati carName<br/><br/>
+Ker so lokalne spremenljivke prepoznane samo znotraj njihovih funkcij, lahko spremenljivke z istim imenom uporabljamo v različnih funkcijah.<br/>
+
+Lokalne spremenljivke se ustvarijo ob zagonu funkcije in izbrišejo, ko se funkcija zaključi.
+<br/><br/>
+</div>
 
 <div class="cell large-7 medium-12 small-12">
 <div id="blocklyDiv" style="height: 500px; width: auto">
@@ -131,8 +231,7 @@
 
 
 <div id="solution" hidden class="cell large-12 medium-12 small-12 align-right">
-  <p>Resitev 
-    console.log("lalalaal");  
+  <p>Rešitev:
   </p>
   <img id="solution-img" src="">
 </div>

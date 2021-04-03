@@ -59,3 +59,9 @@ function exrsNext(){
     hidde_solution();
    
  }
+
+function mainPage(){
+ window.open("http://localhost/projekt1/prvastran.html","_self")
+
+}
+

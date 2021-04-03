@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Blockly</title>
+    <title>Javascript Blockly </title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
@@ -40,7 +40,8 @@
   	<div class="top-bar">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">JavaScript z Bloclyjem</li>
+      <li class="menu-text link" onclick="mainPage()">JavaScript z Blocklyjem  
+       </li>
      
     </ul>
   </div>
@@ -52,7 +53,7 @@
   </div>
 </div>
 <div class="grid-x grid-margin-x">
- <div class="cell medium-2 large-2">
+ <div class="cell medium-2 large-2" style="background-color:#e6e6e6;">
   <side-menu>
   </side-menu>
 </div>
@@ -60,31 +61,31 @@
 
 <div class="cell large-9 medium-9 align-left">
 <div class="grid-x grid-margin-x">
-<div class="cell large-12 medium-12">
-<h3>Nizi</h3>	
+<div class="cell large-6 medium-12">
+<h3>Polja</h3>	
 <p>
-    Nizi so objekti podobni seznamom. Z njimi je možno izvajati prečne (traversal) in mutacijske operacije. 
-    Ne dolžina niza v JavaScriptu in ne tipi elementov v nizu niso fiksno določeni. Ker se lahko dolžina niza spremeni kadarkoli in se lahko shranjujejo podatki na nezapovrstnih lokacijah v nizu,  nizi v JavaScriptu niso nujno zgoščeni; od programerja je odvisno, kako jih bo uporabil. 
-    Na splošno so to uporabne lastnosti nizov; vedar če te niso zaženjene za našo uporabo, je vredno razmisliti o uporabi zapisanih nizov (typed arrays).
+    Polja so objekti podobni seznamom, tabelam. Z njimi je možno izvajati prečne (traversal) in mutacijske operacije. 
+    Ne dolžina polja v JavaScriptu in ne tipi elementov v nizu niso fiksno določeni. Ker se lahko dolžina niza spremeni kadarkoli in se lahko shranjujejo podatki na nezapovrstnih lokacijah v polju,  polja v JavaScriptu niso nujno zgoščeni; od programerja je odvisno, kako jih bo uporabil. 
+    Na splošno so to uporabne lastnosti polj; vedar če te niso zaženjene za našo uporabo, je vredno razmisliti o uporabi zapisanih polj (ang. typed arrays).
 </p>
 <p>
-    Nizi ne morajo uporabiti tabel (strings) kot indeksov elementov, pač pa se zato uporablja cela števila (integer) 
-    Z označevanjem ali dostopanjem elementov z neštevili, ne bomo nastavili ali pridobili elementa iz niza samega. S tem bomo nastavili ali dobili dostop do spremenljivke, ki je povezana z (that array's object property collection). 
-    Lastnosti objektov v nizu in tabela elementov v nizu sta ločena. Mutacijske in prečne operacije ne morajo biti uporabljene na teh lastnostih. 
+    Polja ne morajo uporabiti nizov (ang. strings) kot indeksov elementov, pač pa se zato uporablja cela števila (ang. integers). 
+    Z označevanjem ali dostopanjem elementov z neštevili, ne bomo nastavili ali pridobili elementa iz polja samega. S tem bomo nastavili ali dobili dostop do spremenljivke, ki je povezana z lastnostjo zbirke tega objekta polja.
+    Lastnosti objektov v polju in tabela elementov v polju sta ločena. Mutacijske in prečne operacije ne morajo biti uporabljene na teh lastnostih. 
 <div id="exercises">
     <p id="1">
-        <b>Vaja 1.</b>
+        <b>Vaja 1/3.</b>
         <br/>
-        Ustvari dva niza in vsakemu dodaj vsaj eno vrednost. 
+        Ustvari polje in mu dodaj dve vrednosti. Polje nato izpiši. 
     <p id="2" hidden>
-        <b>Vaja 2.</b>
+        <b>Vaja 2/3.</b>
         <br/>
-       Ustvari niz z dvema elementoma in izpiši njuno dolžino. 
+        Ustvari polje z dvema elementoma in izpiši njegovo dolžino. 
     </p>
     <p id="3" hidden>
-        <b>Vaja 3.</b>
+        <b>Vaja 3/3.</b>
         <br/>
-        Ustvari niz z dvema elementoma in nato izbriši zadnji element. 
+        Ustvari polje z dvema elementoma in nato izbriši zadnji element. 
 
         
     </p>
@@ -98,6 +99,11 @@
     naprej
 </button>
 </div>
+
+<div class="cell large-6 medium-12">
+
+
+  </div>
 
 
 <div class="cell large-7 medium-12 small-12">
@@ -118,8 +124,7 @@
 </div>
 
 <div id="solution" hidden class="cell large-12 medium-12 small-12 align-right">
-  <p>Resitev 
-    console.log("lalalaal");  
+  <p>Rešitev:
   </p>
   <img id="solution-img" src="">
 </div>

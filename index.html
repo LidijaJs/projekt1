@@ -52,7 +52,8 @@
   </div>
 </div>
 <div class="grid-x grid-margin-x">
- <div class="cell medium-2 large-2">
+ <div class="cell medium-2 large-2" style="background-color:#e6e6e6;">
+  
   <side-menu>
   </side-menu>
 </div>
@@ -60,38 +61,79 @@
 
 <div class="cell large-9 medium-9 align-left">
 <div class="grid-x grid-margin-x">
-<div class="cell large-12 medium-12">
+<div class="cell large-6 medium-12">
+
+
+
 <h3>Spremenljivke</h3>	
-
+<br>
 <p>
-Vrednosti so podatki v programu, ki jih v obliki bitov shranjujemo v delovni pomnilnik da jih lahko kasneje uporabimo.  Vsaka vrednosti ima svoj tip in vsak tip vrednosti ima v programu drugačno vlogo. 
-Da v jeziku JavaScript ustvarimo vrednost, zadostuje, da jo pokličemo po imenu. 
+JavaScript spremenljivke so vsebniki za shranjevanje podatkovnih vrednosti, 
+kot na primer številka, ki jo lahko uporabimo v vsoti, ali niz, ki ga lahko 
+uporabimo kot del stavka. 
+<br>
+<br>
+Primer: <br>
+var x = 5; <br>
+var y = 6; <br>
+var z = x + y; <br><br>
 
-JavaScript spremenljivke so vsebniki za shranjevanje podatkovnih vrednosti, tako kot številka, ki jo lahko uporabimo v vsoti, ali niz, ki ga lahko uporabimo kot del stavka.
-Posebnost pri spremenljivkah je, da se njihove vsebovane vrednosti lahko spreminjajo,
-Druga posebnost spremenljivk je ta, da lahko vsebujejo skoraj vse - ne le nizov in števil.
-Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije. 
+
+Z zgornjega primera lahko pričakujemo, da: <br>
+- spremenljivka x bo shranila vrednost 5, <br>
+- y bo shranil vrednost 6.<br>
+- z bo shranil vrednost 11. <br>
+<br>
+Z Blocklyjem bi to naredili tako: <br>
+
+<img src="assets/img/Primer1.JPG" alt="Spremenljivke primer 1" style="height: 140px"> <br>
+<br> 
+ <br> 
+<b>Imena spremenljivk</b>
+<br> 
+Vse spremenljivke JavaScript je treba identificirati z enoličnimi imeni.
+Ta enolična imena se imenujejo identifikatorji.
+Identifikatorji so lahko kratka imena (na primer x in y) ali več opisnih imen (starost, vsota, skupni volumen). Splošna pravila za oblikovanje imen za spremenljivke (enolični identifikatorji) so:
+<br> <br> 
+Imena lahko vsebujejo črke, števke, podčrtaje in dolarske znake.<br> 
+Imena se morajo začeti s črko <br> 
+Imena se lahko začnejo tudi z $ in _ (vendar ga v tej vadnici ne bomo uporabljali) <br> 
+Imena razlikujejo med velikimi in malimi črkami (y in Y sta različni spremenljivki) <br> 
+Rezerviranih besed (kot so ključne besede JavaScript) ni mogoče uporabiti kot imena <br> <br>
+Identifikatorji JavaScript razlikujejo med velikimi in malimi črkami! <br> 
+
+<br><b> Operater dodelitve </b><br>
+V JavaScript je enačba (=) operator "dodelitve" in ne operator "je enako".
+To se razlikuje od algebre. Naslednje v algebri ni smiselno:
+<br>
+x = x + 5
+<br>
+V JavaScript pa je povsem smiselno: x dodeli vrednost x + 5.
+(Izračuna vrednost x + 5 in rezultat postavi v x. Vrednost x se poveča za 5.)
+<br><br>
+Operator " je enako" je v JavaScript zapisan kot ==.
+<br><br>
 </p>
-
+<br>
 <div id="exercises">
     
     <p id="1">
-        <b>Vaja 1.</b>
+        <b>Vaja 1/4.</b>
         <br/>
-        Ustvari spremenljivko 'a' in ji dodeli tekst (string value).
+        Ustvari spremenljivko 'a' in ji dodeli tekst.
     </p>
     <p id="2" hidden>
-        <b>Vaja 2.</b>
+        <b>Vaja 2/4.</b>
         <br/>
         Ustvari spremenljivko 'a' in ji dodeli številsko vrednost. 
     </p>
     <p id="3" hidden>
-      <b>Vaja 3.</b>
+      <b>Vaja 3/4.</b>
       <br/>
       Ustvari spremenljivki 'a' in 'b' (obe tipa integer) in njuno vsoto dodeli spremenljivki 'c'.
   </p>
   <p id="4" hidden>
-    <b>Vaja 4.</b>
+    <b>Vaja 4/4.</b>
     <br/>
     Ustvari spremenljivki 'a' in 'b' (obe besedilnega tipa) in izpiši njuno vsoto.
 </p>
@@ -103,8 +145,56 @@ Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije.
 <button type="button" class="button" onclick="exrsNext()">
     naprej
 </button>
-</div>
 
+
+  
+
+</div>
+<div class="cell large-6 medium-12">
+  <br>
+  <p> 
+ <br><br>
+<b> JavaScript podatkovni tipi </b>
+<br>
+Spremenljivke JavaScript lahko vsebujejo številke, kot je 100, in besedilne vrednosti, kot je "John Doe". Pri programiranju se besedilne vrednosti imenujejo besedilni nizi.
+<br>
+JavaScript lahko obdeluje številne vrste podatkov, ampak za zdaj si zapomnite le številke in nize.
+Nizi so zapisani znotraj dvojnih ali enojnih narekovajev. Številke so zapisane brez narekovajev.
+Če številko postavite v narekovaje, bo obravnavana kot besedilni niz.
+<br><br>
+Primer<br>
+var pi = 3,14;<br>
+var oseba = "Janez Novak";<br>
+var odgovor = 'Da, sem!';<br>
+<br><br>
+<b>Deklariranje (ustvarjanje) spremenljivk JavaScript</b><br>
+Ustvarjanje spremenljivke v JavaScript se imenuje "izjava" (ang. declaring) spremenljivke.
+Spremenljivko JavaScript deklarirate s ključno besedo var:<br>
+var avtoIme;<br>
+Po deklaraciji spremenljivka nima vrednosti (tehnično ima vrednost undefined).
+<br><br>
+Če želite spremenljivki dodeliti vrednost, uporabite znak enačbe: <br>
+avtoIme = "Volvo"; <br>
+Spremenljivki lahko dodelite tudi vrednost, ko jo izjavite:<br>
+var carName = "Volvo"; <br><br>
+
+<b>Ponovno prijavljanje spremenljivk JavaScript</b><br>
+Če ponovno deklarirate spremenljivko JavaScript, ta ne bo izgubila vrednosti.
+Spremenljivka carName bo po izvedbi teh stavkov še vedno imela vrednost "Volvo": <br>
+var carName = "Volvo"; <br>
+var carName; <br><br>
+
+<b>JavaScript aritmetika</b> <br>
+Kot pri algebri lahko tudi s spremenljivkami JavaScript naredite aritmetiko z uporabo operatorjev, kot sta = in +:<br>
+Primer <br>
+var x = 5 + 2 + 3; <br><br>
+Posebnost pri spremenljivkah je, da se njihove vsebovane vrednosti lahko spreminjajo.<br>
+Druga posebnost spremenljivk je ta, da lahko vsebujejo skoraj vse - ne le nizov in števil.<br>
+Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije. 
+<br>
+
+  </p> 
+</div>
 
 <div class="cell large-7 medium-12 small-12">
 <div id="blocklyDiv" style="height: 500px; width: auto">
@@ -125,8 +215,7 @@ Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije.
 </div>
 
 <div id="solution" hidden class="cell large-12 medium-12 small-12 align-right">
-  <p>Resitev 
-    console.log("lalalaal");  
+  <p> <br><br>Rešitev:
   </p>
   <img id="solution-img" src="">
 </div>
