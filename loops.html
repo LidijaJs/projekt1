@@ -59,7 +59,7 @@
 
 
 <div class="cell large-9 medium-9 align-left">
-<div class="grid-x grid-margin-x">
+<div class="grid-x grid-margin-x" style="margin-bottom: 150px">
 <div class="cell large-6 medium-12">
 <br><br>
 
@@ -69,17 +69,26 @@
 Zanke so priročne, če želite vedno znova zagnati isto kodo, vsakič z drugo vrednostjo. Pogosto se pri delu z nizi zgodi naslednje:<br><br>
 
 Namesto pisanja:<br>
-besedilo + = avtomobili [0] + "...";<br>
-besedilo + = avtomobili [1] + "...";<br>
-besedilo + = avtomobili [2] + "...";<br>
-besedilo + = avtomobili [3] + "...";<br>
-besedilo + = avtomobili [4] + "...";<br>
-besedilo + = avtomobili [5] + "...";<br>
-Lahko napišete:<br>
-var i;<br>
-za (i = 0; i <cars.length; i ++) {<br>
-   besedilo + = avtomobili [i] + "...";<br>
-}<br><br>
+<pre style='color:#000000;background:#ffffff;'>besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span>
+besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span> 
+besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>]</span> 
+besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span><span style='color:#008c00; '>3</span><span style='color:#808030; '>]</span> 
+besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span><span style='color:#008c00; '>4</span><span style='color:#808030; '>]</span> 
+besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span><span style='color:#008c00; '>5</span><span style='color:#808030; '>]</span> 
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:57:59 UTC -->
+
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:51:26 UTC -->
+<!--Created using ToHtml.com on 2021-04-04 17:43:29 UTC -->
+<br>Lahko napišete:<br>
+<pre style='color:#000000;background:#ffffff;'>var i<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span>i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> avtomobili<span style='color:#808030; '>.</span>length<span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span> <span style='color:#808030; '>+</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>&lt;br></span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:54:52 UTC -->
+<!--Created using ToHtml.com on 2021-04-04 17:44:32 UTC --><br><br>
 
 <b>Različne vrste zank</b><br>
 JavaScript podpira različne vrste zank:<br>
@@ -90,51 +99,77 @@ for / of - zanke skozi vrednosti iterabilnega predmeta<br>
 while - se vrti skozi blok kode, medtem ko je določen pogoj resničen<br>
 do / while - tudi zanke skozi blok kode, medtem ko je določen pogoj resničen<br><br>
 
-<b>Za zanka</b><br>
+<b>Za (ang. for) zanka</b><br>
 Zanka for ima naslednjo sintakso:<br><br>
-za (stavek 1; stavek 2; stavek 3) {<br>
-  // blok kode, ki se izvede<br>
-}<br><br>
-Stavek 1 se izvede (enkrat) pred izvajanjem bloka kode.<br>
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span>stavek <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span> stavek <span style='color:#008c00; '>2</span><span style='color:#800080; '>;</span> stavek <span style='color:#008c00; '>3</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+<span style='color:#696969; '>// blok kode, ki se izvede</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:59:53 UTC -->
+<br>
+Stavek (ang. statement) 1 se izvede (enkrat) pred izvajanjem bloka kode.<br>
 
 Stavek 2 opredeljuje pogoj za izvajanje kodnega bloka.<br>
 
 Stavek 3 se izvede (vsakič) po izvedbi bloka kode.<br><br>
 
 Primer:<br>
-za (i = 0; i <5; i ++) {<br>
-  text + = "Število je" + i + "...";<br>
-}<br><br>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span>i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> <span style='color:#008c00; '>5</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Število je</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>+</span> i<span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre><br>
+<!--Created using ToHtml.com on 2021-04-04 18:02:32 UTC -->
 Iz zgornjega primera lahko preberete:<br>
-Izjava 1 nastavi spremenljivko pred zagonom zanke (var i = 0).<br>
-Izjava 2 opredeljuje pogoj za zagon zanke (mora biti manjša od 5).<br>
-Izjava 3 poveča vrednost (i ++) vsakič, ko se izvede blok kode v zanki.<br><br>
+Stavek 1 nastavi spremenljivko pred zagonom zanke (var i = 0).<br>
+Stavek 2 opredeljuje pogoj za zagon zanke (mora biti manjša od 5).<br>
+Satvek 3 poveča vrednost (i ++) vsakič, ko se izvede blok kode v zanki.<br><br>
 
 <b>Stavek 1</b><br>
-Običajno boste uporabili stavek 1 za inicializacijo spremenljivke, uporabljene v zanki (i = 0).
-Temu ni vedno tako, JavaScriptu je vseeno. Izjava 1 ni obvezna.<br>
+Običajno boste uporabili stavek 1 za inicializacijo spremenljivke uporabljene v zanki (i = 0).
+Temu ni vedno tako, JavaScriptu je vseeno. Stavek 1 ni obvezen.<br>
 
-V stavku 1 (ločeno z vejico) lahko sprožite veliko vrednosti:<br><br>
-
-Primer:<br>
-za (i = 0, len = cars.length, text = ""; i <len; i ++) {<br>
-   besedilo + = avtomobili [i] + "...";<br>
-}<br><br>
-Izjavo 1 lahko izpustite (na primer, ko so vaše vrednosti nastavljene pred zagonom zanke):<br><br>
+V stavku 1 (ločen z vejico) lahko ustvarite veliko vrednosti:<br><br>
 
 Primer:<br>
-var i = 2;<br>
-var len = cars.length;<br>
-var text = "";<br>
-za (; i <len; i ++) {<br>
-   besedilo + = avtomobili [i] + "...";<br>
-}<br><br>
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span>i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> len <span style='color:#808030; '>=</span> avti<span style='color:#808030; '>.</span>length<span style='color:#808030; '>,</span> text <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> len<span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:10:28 UTC -->
+<!--Created using ToHtml.com on 2021-04-04 18:09:24 UTC --><br>
+Stavek 1 lahko izpustite (na primer, ko so vaše vrednosti nastavljene pred zagonom zanke):<br>
+<pre style='color:#000000;background:#ffffff;'>var i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>2</span><span style='color:#800080; '>;</span>
+var len <span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>.</span>length<span style='color:#800080; '>;</span>
+var besedilo <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> len<span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:11:46 UTC -->
+<br><br>
 <b>Stavek 2</b><br/>
 Stavek 2 se pogosto uporablja za oceno stanja začetne spremenljivke.
 Temu ni vedno tako, JavaScriptu je vseeno. Tudi stavek 2 je neobvezen.
 Če stavek 2 vrne true, se zanka začne znova, če vrne false, se zanka konča.
 <br/><br/>
 Če izpustite izjavo 2, morate zagotoviti zanko znotraj zanke. V nasprotnem primeru se zanka ne bo nikoli končala. To bo zrušilo vaš brskalnik.<br/><br/>
+<b>Izjava 3</b><br/>
+Stavek 3 pogosto poveča vrednost začetne spremenljivke.
+Temu ni vedno tako, JavaScriptu je vseeno in stavek 3 ni obvezen.
+Izjava 3 lahko naredi karkoli, na primer negativni prirastek (i--), pozitivni prirastek (i = i + 15) ali kar koli drugega.
+Izjava 3 je lahko tudi izpuščena (na primer pri povečevanju vrednosti znotraj zanke):<br/><br/>
+
+Primer:
+<pre style='color:#000000;background:#ffffff;'>var i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+var len <span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>.</span>length<span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> len<span style='color:#800080; '>;</span> <span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span> 
+  i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:13:18 UTC --><br/><br/>
 </p>
 
 <div id="exercises">
@@ -179,51 +214,46 @@ Temu ni vedno tako, JavaScriptu je vseeno. Tudi stavek 2 je neobvezen.
 <div class="cell large-6 medium-12">
   <p><br/><br/><br/><br>
 
-<b>Izjava 3</b><br/>
-Stavek 3 pogosto poveča vrednost začetne spremenljivke.
-Temu ni vedno tako, JavaScriptu je vseeno in stavek 3 ni obvezen.
-Izjava 3 lahko naredi karkoli, na primer negativni prirastek (i--), pozitivni prirastek (i = i + 15) ali kar koli drugega.
-Izjava 3 je lahko tudi izpuščena (na primer pri povečevanju vrednosti znotraj zanke):<br/><br/>
 
-Primer:<br/>
-var i = 0;<br/>
-var len = cars.length;<br/>
-za (; i len; ) { <br/>
-   besedilo += avtomobili[i] + "...";<br/>
-   i ++;<br/>
-}<br/><br/>
 
-<b>Medtem ko zanka</b><br/>
+<b>Medtem ko zanka (ang. While)</b><br/>
 Zanka while kroži skozi blok kode, dokler je določen pogoj resničen.<br/>
 
 Sintaksa:<br/>
-medtem ko (stanje) {<br/>
-   // blok kode, ki se izvede<br/>
-}<br/>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span>pogoj<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  <span style='color:#696969; '>//koda, ki se izvede</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:17:03 UTC --><br/>
 V naslednjem primeru se bo koda v zanki izvajala znova in znova, dokler bo spremenljivka (i) manjša od 10:<br/><br/>
 
-Primer:<br/>
-medtem ko (i <10) {<br/>
-   text + = "Število je" + i;<br/>
-   i ++;
-   }<br/><br/>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span>i <span style='color:#808030; '>&lt;</span> <span style='color:#008c00; '>10</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Število je</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>+</span> i<span style='color:#800080; '>;</span>
+  i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:17:47 UTC --><br/><br/>
 
-<b>Zanka Do / While</b><br/>
-Zanka do / while je različica zanke while. Ta zanka bo enkrat izvedla blok kode, preden bo preverila, ali je pogoj resničen, nato bo zanko ponavljala, dokler je pogoj resničen.<br/>
+<b>Zanka Naredi, medtem ko (ang. Do/While)</b><br/>
+Zanka do/while je različica zanke while. Ta zanka bo enkrat izvedla blok kode, preden bo preverila, ali je pogoj resničen, nato bo zanko ponavljala, dokler je pogoj resničen.<br/>
 Sintaksa:<br/>
-naredi {<br/>
-   // blok kode, ki se izvede<br/>
-}<br/>
-medtem ko (stanje);<br/><br/>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>do</span> <span style='color:#800080; '>{</span>
+  <span style='color:#696969; '>// koda, ki se izvede</span>
+<span style='color:#800080; '>}</span>
+<span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span>condition<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:19:29 UTC --><br/>
 
-Spodnji primer uporablja zanko do / while. Zanka se bo vedno izvedla vsaj enkrat, tudi če je pogoj neresničen, ker se blok kode izvede pred preizkusom pogoja:<br/><br/>
+Spodnji primer uporablja zanko do/while. Zanka se bo vedno izvedla vsaj enkrat, tudi če je pogoj neresničen, ker se blok kode izvede pred preizkusom pogoja:<br/><br/>
 
 Primer:<br/>
-naredi {<br/>
-   text + = "Število je" + i;<br/>
-   i ++;<br/>
-}<br/>
-medtem ko (i <10);<br/><br/>
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>do</span> <span style='color:#800080; '>{</span>
+  text <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Število je</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>+</span> i<span style='color:#800080; '>;</span>
+  i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+<span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span>i <span style='color:#808030; '>&lt;</span> <span style='color:#008c00; '>10</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:20:34 UTC --><br/>
 Ne pozabite povečati spremenljivke, ki je uporabljena v pogoju, sicer se zanka ne bo nikoli končala!<br/><br/>
 
 <b>Primerjava za in medtem</b><br>
@@ -231,25 +261,29 @@ Ne pozabite povečati spremenljivke, ki je uporabljena v pogoju, sicer se zanka 
 Zanka v tem primeru uporablja zanko for za zbiranje imen avtomobilov iz niza cars:<br><br>
 
 Primer:<br>
-var cars = ["BMW", "Volvo", "Saab", "Ford"];<br>
-var i = 0;<br>
-var text = "";<br><br>
+<pre style='color:#000000;background:#ffffff;'>var avtomobili <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>BMW</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Volvo</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Saab</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Ford</span><span style='color:#800000; '>"</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+var i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+var besedilo <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
 
-za (; avtomobile [i];) {<br>
-   besedilo + = avtomobili [i] + "...";<br>
-   i ++;<br>
-}<br><br>
+<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800080; '>;</span>avtomobili<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+  i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:22:02 UTC --><br>
 Zanka v tem primeru uporablja zanko while za zbiranje imen avtomobilov iz niza cars:<br><br>
 
 Primer:<br>
-var cars = ["BMW", "Volvo", "Saab", "Ford"];<br>
-var i = 0;<br>
-var text = "";<br><br>
+<pre style='color:#000000;background:#ffffff;'>var avtomobili <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>BMW</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Volvo</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Saab</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Ford</span><span style='color:#800000; '>"</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+var i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+var besedilo <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
 
-medtem ko (avtomobili [i]) {<br>
-   besedilo + = avtomobili [i] + "...";<br>
-   i ++;<br>
-}<br><br>
+<span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span>avtomobili<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  besedilo <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> avtomobili<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+  i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 18:23:43 UTC --><br>
 
 </p>
 </div>

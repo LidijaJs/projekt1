@@ -1,9 +1,9 @@
 .main-section{
     position: relative;
-    bottom:-138px;
+    /* bottom:-138px; */
     background-color: #4A4A4A;
-    padding:40px;
-    margin-top:80px !important;
+    padding:40px; 
+    /* margin-top:80px !important; */
     font-family: 'Archivo Narrow', sans-serif;
   }
   .title h4,.search h4{

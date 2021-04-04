@@ -60,7 +60,7 @@
 
 
 <div class="cell large-9 medium-9 align-left">
-<div class="grid-x grid-margin-x">
+<div class="grid-x grid-margin-x" style="margin-bottom: 150px">
 <div class="cell large-6 medium-12">
 <br><br>
 <h3><b>Pogojni stavki</b></h3>	
@@ -80,34 +80,47 @@ V JavaScriptu poznamo naslednje pogojne stavke:
 <b>Stavek če</b><br>
 Z stavkom če določite blok kode JavaScript, ki naj se izvede, če je pogoj resničen.<br>
 Sintaksa: <br>
-če (pogoj) { <br>
-   // blok kode, ki se izvede, če je pogoj resničen <br>
-} <br>
+<pre style='color:#000000;background:#ffffff;'>če <span style='color:#808030; '>(</span>pogoj<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span> 
+   <span style='color:#696969; '>// blok kode, ki se izvede, če je pogoj resničen </span>
+<span style='color:#800080; '>}</span> 
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:40:18 UTC -->
+
+<br>
 Upoštevajte, da stavek "če" zapišemo z malimi črkami. Velike črke (Če ali ČE) bodo ustvarile napako.<br><br>
 Primer:<br>
 Če je ura manj kot 18:00, pozdravite "Dober dan":<br><br>
 
-če (ura <18) {<br>
-   pozdrav = "Dober dan";<br>
-}<br><br>
-Rezultat pozdrava bo:
-Dober dan<br><br>
+<pre style='color:#000000;background:#ffffff;'>če <span style='color:#808030; '>(</span>ura <span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>18</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+pozdrav <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Dober dan</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:37:14 UTC -->
+<br>Rezultat pozdrava bo:
+Dober dan<br>
+Z Blocklyjem bi ta primer rešili tako:<br>
+<img src="assets/img/PrimerPogoji.JPG" alt="Spremenljivke primer 1" style="height: 110px"> <br>
+<br>
 <b>Izjava sicer</b><br>
 Z izjavo sicer določite blok kode, ki naj se izvede, če je pogoj neresničen.<br><br>
-če (pogoj) {<br>
-   // blok kode, ki se izvede, če je pogoj resničen<br>
-} sicer {<br>
-   // blok kode, ki se izvede, če je pogoj neresničen<br>
-}
-<br><br>
+<pre style='color:#000000;background:#ffffff;'>če <span style='color:#808030; '>(</span>pogoj<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+<span style='color:#696969; '>// blok kode, ki se izvede, če je pogoj resničen</span>
+<span style='color:#800080; '>}</span> sicer <span style='color:#800080; '>{</span>
+<span style='color:#696969; '>// blok kode, ki se izvede, če je pogoj neresničen</span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:38:15 UTC -->
+<br>
 Primer:<br>
 Če je ura manj kot 18, ustvarite pozdrav "Dober dan", drugače "Dober večer":<br><br>
-
-če (ura <18) {<br>
-   pozdrav = "Dober dan";<br>
-} sicer {<br>
-   pozdrav = "Dober večer";<br>
-}<br><br>
+<pre style='color:#000000;background:#ffffff;'>če <span style='color:#808030; '>(</span>ura <span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>18</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span><span style='color:#808030; '>&lt;</span>br<span style='color:#808030; '>></span>
+   pozdrav <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Dober dan</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span><span style='color:#808030; '>&lt;</span>br<span style='color:#808030; '>></span>
+<span style='color:#800080; '>}</span> sicer <span style='color:#800080; '>{</span><span style='color:#808030; '>&lt;</span>br<span style='color:#808030; '>></span>
+   pozdrav <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Dober večer</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span><span style='color:#808030; '>&lt;</span>br<span style='color:#808030; '>></span>
+<span style='color:#800080; '>}</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:38:56 UTC -->
+<br>
 Rezultat pozdrava bo: 
 Dober dan<br><br>
 </p>
@@ -139,22 +152,35 @@ Dober dan<br><br>
 <b>Izjava sicer če</b><br>
 Z izjavo sicer če določite nov pogoj, če je prvi pogoj napačen.<br>
 Sintaksa: <br><br>
-če (pogoj1) {<br>
-   // blok kode, ki se izvede, če je pogoj1 resničen<br>
-} sicer če (pogoj2) {<br>
-   // blok kode, ki se izvede, če je pogoj1 neresničen in pogoj2 resničen<br>
-} sicer {<br>
-   // blok kode, ki se izvede, če je pogoj1 neresničen in pogoj2 neresničen<br><br>
+
+<pre style='color:#000000;background:#ffffff;'>če <span style='color:#808030; '>(</span>pogoj1<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+<span style='color:#696969; '>// blok kode, ki se izvede, če je pogoj1 resničen</span>
+<span style='color:#800080; '>}</span> sicer če <span style='color:#808030; '>(</span>pogoj2<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+<span style='color:#696969; '>// blok kode, ki se izvede,</span>
+<span style='color:#696969; '>//če je pogoj1 neresničen in pogoj2 resničen</span>
+<span style='color:#800080; '>}</span> sicer <span style='color:#800080; '>{</span>
+<span style='color:#696969; '>// blok kode, ki se izvede, </span>
+<span style='color:#696969; '>//če je pogoj1 neresničen in pogoj2 neresničen</span>
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:27:07 UTC -->
+<!--Created using ToHtml.com on 2021-04-04 17:25:59 UTC -->
+
+   <br><br>
 Primer:<br>
 Če je ura manj od 10:00, ustvarite pozdrav "Dobro jutro", če ni, ura pa je vseeno manj kot 20:00, ustvarite pozdrav "Dober dan", sicer pa "Dober večer":<br><br>
 
-če (čas <10) {<br>
-   pozdrav = "Dobro jutro";<br>
-} sicer če (čas <20) {<br>
-   pozdrav = "Dober dan";<br>
-} sicer {<br>
-   pozdrav = "Dober večer";<br>
-}<br><br>
+<pre style='color:#000000;background:#ffffff;'>če <span style='color:#808030; '>(</span>čas <span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>10</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+pozdrav <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Dobro jutro</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span> sicer če <span style='color:#808030; '>(</span>čas <span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>20</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+pozdrav <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Dober dan</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span> sicer <span style='color:#800080; '>{</span>
+pozdrav <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Dober večer</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+
+</pre>
+<!--Created using ToHtml.com on 2021-04-04 17:21:37 UTC -->
+
+
 Rezultat pozdrava bo:
 Dober dan<br><br>
 
