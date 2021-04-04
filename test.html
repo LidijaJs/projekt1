@@ -1,255 +1,320 @@
-<!DOCTYPE html>
-<html lang="sl">
+<!doctype html>
 
-<head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="../favicon.ico" />
+<html class="no-js" lang="sl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Blockly</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
-	<title></title>
+    <link rel="stylesheet" href="lib/codemirror.css">
+	<script src="lib/codemirror.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-	<!-- Bootstrap Core CSS -->
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Custom CSS -->
-	<link href="../css/simple-sidebar.css" rel="stylesheet">
-	<link href="../css/font-awesome.min.css" rel="stylesheet">
+    <script src="google-blockly/blockly_compressed.js"></script>
+    <script src="google-blockly/javascript_compressed.js"></script>
+    
+   
+	<!-- <script src="google-blockly/blocks_compressed.js"></script> -->
+	<script src="google-blockly/msg/js/sl.js"></script>
+    <script src="google-blockly/slomsg.js"></script>
 
-	<link href="../css/style.css" rel="stylesheet">
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
-</head>
+	<script src="google-blockly/blocks/logic.js"></script>
+	<script src="google-blockly/blocks/loops.js"></script>
+	<script src="google-blockly/blocks/math.js"></script>
+	<script src="google-blockly/blocks/text.js"></script>
+	<script src="google-blockly/blocks/lists.js"></script>
+	<script src="google-blockly/blocks/colour.js"></script>
+	<script src="google-blockly/blocks/variables.js"></script>
+	<script src="google-blockly/blocks/procedures.js"></script>
 
-<body>
+  </head>
 
-	<div id="wrapper">
+  <body>
+  	<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+		<li class="menu-text link" onclick="mainPage()">JavaScript z Blocklyjem  
+		</li>
+     
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Išči</button></li>
+    </ul>
+  </div>
+</div>
+<div class="grid-x grid-margin-x">
+ <div class="cell medium-2 large-2" style="background-color:#e6e6e6;">
+  
+  <side-menu>
+  </side-menu>
+</div>
 
-		<!-- Sidebar -->
-		<div id="sidebar-wrapper">
-			<ul class="sidebar-nav">
-				<li>
-				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
-				  <div id="menu1" class="collapse">
-					<ul class="sidebar-subnav">
-					<li><a href="../1101/index.html">O učbeniku</a></li>
-					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
-					</ul>
-				  </div>
-				</li>
-				<li>
-				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
-				  <div id="menu2" class="collapse">
-					<ul class="sidebar-subnav">
-					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
-					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
-					<li><a href="../1203/index.html">Zanke</a></li>
-					<li><a href="../1204/index.html">Tabele</a></li>
-					<li><a href="../1205/index.html">Funkcije</a></li>
-					<li><a href="../1206/index.html">Nizi</a></li>
-					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
-					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
-					<li><a href="../1209/index.html">Zaporedje</a></li>
-					<li><a href="../1210/index.html">Urejanje</a></li>
-					<li><a href="../1211/index.html">Množica</a></li>
-					<li><a href="../1212/index.html">Slovar</a></li>
-					</ul>
-				  </div>
-				</li>
-				<li>
-				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
-				  <div id="menu3" class="collapse">
-					<ul class="sidebar-subnav">
-					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
-					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
-					<li><a href="../1303/index.html">Ukazi</a></li>
-					<li><a href="../1304/index.html">Arhitektura računalnika</a></li>
-					<li><a href="../1305/index.html">Pomnilnik</a></li>
-					<li><a href="../1306/index.html">Operacijski sistem</a></li>
-					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
-					<li><a href="../1308/index.html">Uporabniki in varnost</a></li>
-					<li><a href="../1309/index.html">Procesi</a></li>
-					<li><a href="../1310/index.html">Vzporednost</a></li>
-					</ul>
-				  </div>
-				</li>
-				<li>
-				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
-				  <div id="menu4" class="collapse">
-					<ul class="sidebar-subnav">
-					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
-					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
-					<li><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
-					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
-					<li><a href="../1405/index.html">Storitve interneta</a></li>
-					<li><a href="../1406/index.html">Svetovni splet</a></li>
-					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
-					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
-					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
-					</ul>
-				  </div>
-				</li>
-				<li>
-				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
-				  <div id="menu5" class="collapse">
-					<ul class="sidebar-subnav">
-					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
-					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
-					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
-					</ul>
-				  </div>
-				</li>
-			</ul>
-		</div>
-		<!-- /#sidebar-wrapper -->
 
-		<!-- Fixed navbar -->
-		<nav class="navbar navbar-default navbar-static-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
-					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
-					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
-					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
-					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-		</nav>
+<div class="cell large-9 medium-9 align-left">
+<div class="grid-x grid-margin-x">
+<div class="cell large-6 medium-12">
 
-		<!-- Modal (popup) window: License -->
-		<div id="license" class="modal fade" role="dialog">
-			<div class="modal-dialog">
 
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Licenca</h4>
-					</div>
-					<div class="modal-body">
-						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
-						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
-						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
-						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
-					</div>
-				</div>
 
-			</div>
-		</div>
+<h3>Test</h3>	
+<br>
+<p>
+</p>
+<div id="myProgress">
+	<div data-progress=0 id="myBar">0%</div>
+  </div>
 
-		<!-- Modal (popup) window: Catalogue -->
-		<div id="catalogue" class="modal fade" role="dialog">
-			<div class="modal-dialog">
+<div id="exercises">
+    
+    <p id="1">
+        <b>Vaja 1/5.</b>
+        <br/>
+        Ustvari spremenljivko 'a' in ji dodeli tekst 'Količina jabolk, ki jih ima Dalja: ',  Ustvari spremenljivko 'b' in ji številsko vrednost 20.
+		Ustavi spremenljivko 'c' kot povezava a in b.
+    </p>
+    <p id="2" hidden>
+	
+        <b>Vaja 2/5.</b>
+        <br/>
+	
+        Your programm should check variable speed and generate correct output. If our speed meets a certain condition, it should return a certain string.
+		Set speed variable to: <span id="speed"></span> <br/>
+		- If our speed is under 10 or equal - return 'slow'<br/>
+		- If our speed is over 10 and up to 40 - return 'average'<br/>
+		- If our speed is over 40 and is up to 100 - return 'fast'<br/>
+		- If our speed is over 100 and up to 180 - return 'very fast'<br/>
+		- If our speed is over 180 - return 'extremely fast'<br/>
+	</p>
+    <p id="3" hidden>
+      <b>Vaja 3/5.</b>
+      <br/>
+      Napišite program, ki sešteje vse večkratnike 5 v območju od 0 do 100 (vključno).
+  </p>
+  <p id="4" hidden>
+    <b>Vaja 4/5.</b>
+    <br/>
+	Napišite program, ki bo tabele dopolnil s parnimi številkami od 0 do 20.
+</p>
+<p id="5" hidden>
+    <b>Vaja 5/5.</b>
+    <br/>
+	Write a JavaScript function that reverse a string 'Slovenija'
+    
+</p>
+    
+</div>
+<button type="button" class="button" onclick="exrsPrev()">
+    nazaj
+</button>
+<button type="button" class="button" onclick="exrsNext()">
+    naprej
+</button>
 
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
-					</div>
-					<div class="modal-body">
-						CIP - Kataložni zapis o publikaciji<br>
-						Narodna in univerzitetna knjižnica, Ljubljana<br>
-						<br>
-						659.2:004(075.3)(0.034.2)<br>
-						004(075.3)(0.034.2)<br>
-						<br>
-						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
-						<br>
-						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
-						<br>
-						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
-						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
-						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
-						<br>
-						1. Anželj, Gregor<br>
-						282126848<br>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
-					</div>
-				</div>
 
-			</div>
-		</div>
+  
 
-		<!-- Page Content -->
-		<div id="page-content-wrapper">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6">
-<!-- Left column start -->
-<!-- Left column end -->
-					</div>
-					<div class="col-md-6">
-						<br />
-<!-- Right column start -->
-<!-- Right column end -->
-					</div>
-				</div>
-			</div>
+</div>
 
-			<!-- Page Pagination in Footer -->
-			<div class="col-md-12">
-				<center>
-				<ul class="pagination pagination-sm"></ul>
-				</center>
-			</div>
+<div class="cell large-7 medium-12 small-12">
+<div id="blocklyDiv" style="height: 500px; width: auto">
+</div>
+</div>
 
-		</div>
-		<!-- /#page-content-wrapper -->
+<div class="cell large-5 medium-12 small-12 align-right">
+	<input value="Zaženi" class="button" type="button" id="codeToString" onClick="executingCode();"> 
+  <input id="checkButton" value="Preveri" class="button" type="button" onClick="testTeste();"> 
+  <input id="solution_button" value="Rešitev" class="button" type="button" onClick="showSolution('variables');"> 
 
-	</div>
-	<!-- /#wrapper -->
+	<pre id="code-area" class="prettyprint" style="height: 443px; font-size: 13px">
 
-	<!-- jQuery -->
-	<script src="../js/jquery.js"></script>
+	</pre>
+	<!--
+	<textarea id="textarea" style="height: 443px" cols="20"></textarea>
+	-->
 
-	<!-- Bootstrap Core JavaScript -->
-	<script src="../js/bootstrap.min.js"></script>
+</div>
 
-	<!-- rPage: Highly responsive pagination for Bootstrap -->
-	<script src="../js/responsive-paginate.js"></script>
-	<script>
-	$(document).ready(function () {
-		$(".pagination").rPage();
-	});
-	</script>
+<div id="solution" hidden class="cell large-12 medium-12 small-12 align-right">
+  <p> <br><br>Rešitev:
+  </p>
+  <img id="solution-img" src="">
+</div>
 
-	<!-- Menu Toggle Script -->
-	<script>
-	$("#menu-toggle").click(function(e) {
-		e.preventDefault();
-		$("#wrapper").toggleClass("toggled");
-	});
-	</script>
 
-	<!-- eXe Project -->
-	<script src="../js/exe/common.js"></script>
 
+
+
+<div>
+
+   </div>
+
+</div>
+</div>
+  
+
+<!--<xml id="toolbox" style="display: none">
+  <category name="Logic" colour="210"> name:</category>
+  <category name="Loops" colour="120">...</category>
+  <category name="Math" colour="230">...</category>
+  <category name="Colour" colour="20">...</category>
+  <block type="controls_if"></block>
+  <block type="controls_repeat_ext"></block>
+  <block type="logic_compare"></block>
+  <block type="math_number"></block>
+  <block type="math_arithmetic"></block>
+  <block type="text"></block>
+  <block type="text_print"></block>
+</xml> -->
+
+ <xml id="toolbox" style="display: none">
+    <category name="Pogoji" colour="%{BKY_LOGIC_HUE}">
+      <category name="Če">
+        <block type="controls_if"></block>
+        <block type="controls_if">
+          <mutation else="1"></mutation>
+        </block>
+        <block type="controls_if">
+          <mutation elseif="1" else="1"></mutation>
+        </block>
+      </category>
+      <category name="Boolean" colour="%{BKY_LOGIC_HUE}">
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_null"></block>
+        <block type="logic_ternary"></block>
+      </category>
+    </category>
+    <category name="Zanke" colour="%{BKY_LOOPS_HUE}">
+      <block type="controls_repeat_ext">
+        <value name="TIMES">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+      <block type="controls_whileUntil"></block>
+      <block type="controls_for">
+        <field name="VAR">i</field>
+        <value name="FROM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+      <block type="controls_forEach"></block>
+      <block type="controls_flow_statements"></block>
+    </category>
+    <category name="Matematika" colour="%{BKY_MATH_HUE}">
+      <block type="math_number">
+        <field name="NUM">123</field>
+      </block>
+      <block type="math_arithmetic"></block>
+      <block type="math_single"></block>
+      <block type="math_trig"></block>
+      <block type="math_constant"></block>
+      <block type="math_number_property"></block>
+      <block type="math_round"></block>
+      <block type="math_on_list"></block>
+      <block type="math_modulo"></block>
+      <block type="math_constrain">
+        <value name="LOW">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="HIGH">
+          <block type="math_number">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+      <block type="math_random_int">
+        <value name="FROM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+      <block type="math_random_float"></block>
+      <block type="math_atan2"></block>
+    </category>
+    <category name="Tabele" colour="%{BKY_LISTS_HUE}">
+      <block type="lists_create_empty"></block>
+      <block type="lists_create_with"></block>
+      <block type="lists_repeat">
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_length"></block>
+      <block type="lists_isEmpty"></block>
+      <block type="lists_indexOf"></block>
+      <block type="lists_getIndex"></block>
+      <block type="lists_setIndex"></block>
+    </category>
+    <sep></sep>
+    <category name="Spremenljivke" custom="VARIABLE" colour="%{BKY_VARIABLES_HUE}">
+    </category>
+    <category name="Funkcije" custom="PROCEDURE" colour="%{BKY_PROCEDURES_HUE}">
+    </category>
+    <sep></sep>
+    <category name="Knjižnica" expanded="true">
+      <category name="Napisi">
+        <block type="text_print">
+          <value name="TEXT">
+            <block type="text">
+              <field name="TEXT">"Tvoji napisi"</field>
+            </block>
+          </value>
+        </block>
+      </category>
+    </category>
+  </xml>
+
+  <xml id="workspaceInitialContent" style="display: none">
+    
+    <block type="controls_if"></block>
+ 
+  </xml>
+
+  
+</div>
+
+<footer>
+
+</footer>
 </body>
-
 </html>
+<script src='navigation.js'></script>
+<script src='blockly-main.js'></script>
+
+
