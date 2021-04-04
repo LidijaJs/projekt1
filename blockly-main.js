@@ -122,22 +122,22 @@ function move(ex) {
 function checkcondition(){
 
   if(spd <= 10 && eval(code) == 'slow'){
-    window.alert('Dobro');
+    window.alert('Pravilno');
     move(2);
   }else if(spd > 10 &&spd < 40 && eval(code) == 'average'){
-    window.alert('Dobro');
+    window.alert('Pravilno');
     move(2);
   }else if(spd >= 40 &&spd < 100 && eval(code) == 'fast'){
-    window.alert('Dobro');
+    window.alert('Pravilno');
     move(2);
   }else if(spd >= 100 && spd < 180 && eval(code) == 'very fast'){
-    window.alert('Dobro');
+    window.alert('Pravilno');
     move(2);
   }else if(spd >= 180 && eval(code) == 'extremely fast'){
-    window.alert('Dobro');
+    window.alert('Pravilno');
     move(2);  
   }else{
-    window.alert('Ne dobro');
+    window.alert('Nepravilno');
 
   }
 
@@ -149,10 +149,10 @@ function testTeste(){
   switch (exNum){
     case '1':
       if(eval(code) == 'Količina jabolk, ki jih ima Dalja: 20'){
-        window.alert("Dobro");
+        window.alert("Pravilno");
         move(1);
       }else{
-        window.alert("Ne dobro");
+        window.alert("Nepravilno");
       }
       break;
 
@@ -161,26 +161,26 @@ function testTeste(){
       break;
     case '3':
       if(eval(code) == 1050){
-        window.alert("Dobro");
+        window.alert("Pravilno");
         move(3);
       }else{
-        window.alert("Ne dobro, probiraj vec");
+        window.alert("Nepravilno");
       }
       break;
     case '4':
       if(eval(code) == [0,2,4,6,8,10,12,14,16,18,20]){
-        window.alert("Dobro");
+        window.alert("Pravilno");
         move(4);
       }else{
-        window.alert("Ne dobro, probiraj vec");
+        window.alert("Nepravilno");
       }
       break;
     case '5':
       if(eval(code) == 'ajinevolS'){
         move(5);
-        window.alert("Dobro");
+        window.alert("Pravilno");
       }else{
-        window.alert("Ne dobro, probiraj vec");
+        window.alert("Nepravilno");
       }
       break;
     }

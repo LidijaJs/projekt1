@@ -157,7 +157,15 @@ Ta izjava spremeni vrednost prvega elementa v avtomobilih:<br>
   document<span style="color:#808030; ">.</span>getElementById<span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">demo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#808030; ">.</span>innerHTML <span style="color:#808030; ">=</span> avtomobili<span style="color:#808030; ">[</span><span style="color:#008c00; ">0</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
   </pre>
   <br>
+<b>Dostop do celotnega polja</b><br>
+Z JavaScriptom lahko do celotnega polja pridete tako, da se sklicujete na ime polja:<br>
+Primer:<br>
 
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+</pre>
+<pre style="color:#000000;background:#ffffff;">document<span style="color:#808030; ">.</span>getElementById <span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">demo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#808030; ">.</span> innerHTML <span style="color:#808030; ">=</span> avtomobili<span style="color:#800080; ">;</span>
+</pre>
+<br><br>
 
 
   </p>
@@ -192,15 +200,7 @@ Ta izjava spremeni vrednost prvega elementa v avtomobilih:<br>
 
 <div class="cell large-6 medium-12">
 <br><br><br><br>
-<b>Dostopite do celotnega polja</b><br>
-Z JavaScriptom lahko do celotnega polja pridete tako, da se sklicujete na ime polja:<br>
-Primer:<br>
 
-<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
-</pre>
-<pre style="color:#000000;background:#ffffff;">document<span style="color:#808030; ">.</span>getElementById <span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">demo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#808030; ">.</span> innerHTML <span style="color:#808030; ">=</span> avtomobili<span style="color:#800080; ">;</span>
-</pre>
-<br><br>
 
 <b>Lastnosti in metode polj</b><br>
 Prava moč nizov JavaScript so vgrajene lastnosti in metode polj:<br>
@@ -254,11 +254,11 @@ fLen <span style="color:#808030; ">=</span> sadje<span style="color:#808030; ">.
   <br>
 
 
-  <pre style="color:#000000;background:#ffffff;">text <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltul&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+  <pre style="color:#000000;background:#ffffff;">besedilo <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltul&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
 za <span style="color:#808030; ">(</span>i <span style="color:#808030; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#800080; ">;</span> i <span style="color:#808030; ">&lt;</span> fLen<span style="color:#800080; ">;</span> i <span style="color:#808030; ">++</span><span style="color:#808030; ">)</span> <span style="color:#800080; ">{</span>
-  text <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltli&gt</span><span style="color:#800000; ">"</span> <span style="color:#808030; ">+</span> sadje <span style="color:#808030; ">[</span>i<span style="color:#808030; ">]</span> <span style="color:#808030; ">+</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt/li&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+  besedilo <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltli&gt</span><span style="color:#800000; ">"</span> <span style="color:#808030; ">+</span> sadje <span style="color:#808030; ">[</span>i<span style="color:#808030; ">]</span> <span style="color:#808030; ">+</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt/li&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
 <span style="color:#800080; ">}</span><span style="color:#808030; "></span><span style="color:#808030; "></span>
-text <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltul&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+besedilo <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltul&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
     </pre>
     
 Uporabite lahko tudi funkcijo Array.forEach ():<br><br>
@@ -271,7 +271,7 @@ sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</sp
   
 
 
-<pre style="color:#000000;background:#ffffff;">text <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt;ul&gt;</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+<pre style="color:#000000;background:#ffffff;">besedilo <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt;ul&gt;</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
 sadje<span style="color:#808030; ">.</span><span style="color:#800000; font-weight:bold; ">forEach</span> <span style="color:#808030; ">(</span>myFunction<span style="color:#808030; ">)</span><span style="color:#800080; ">;</span>
   besedilo <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt;/ul&gt;</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
     
@@ -286,7 +286,7 @@ Najlažji način za dodajanje novega elementa v polje je uporaba metode push ():
 Primer:<br>
 
 <pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
-sadje<span style="color:#808030; ">.</span>push <span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Limona</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Lemon)</span>
+sadje<span style="color:#808030; ">.</span>push <span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Limona</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Limona)</span>
   </pre>
   
 Nov element lahko v polje dodate tudi z uporabo lastnosti length:<br><br>
@@ -294,7 +294,7 @@ Nov element lahko v polje dodate tudi z uporabo lastnosti length:<br><br>
 Primer:<br>
 
 <pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
-sadje<span style="color:#808030; ">[</span>fruit<span style="color:#808030; ">.</span><span style="color:#800000; font-weight:bold; ">length</span><span style="color:#808030; ">]</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">limona</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Lemon)</span>
+sadje<span style="color:#808030; ">[</span>sadje<span style="color:#808030; ">.</span><span style="color:#800000; font-weight:bold; ">length</span><span style="color:#808030; ">]</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">limona</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Limona)</span>
 </pre>
   <br>
 OPOZORILO !
@@ -302,7 +302,7 @@ Dodajanje elementov z visokimi indeksi lahko ustvari nedefinirane "luknje" v pol
 Primer:<br>
 
 <pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
-sadje <span style="color:#808030; ">[</span><span style="color:#008c00; ">6</span><span style="color:#808030; ">]</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Limona</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Lemon)</span>
+sadje <span style="color:#808030; ">[</span><span style="color:#008c00; ">6</span><span style="color:#808030; ">]</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Limona</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Limona)</span>
   </pre>
   
 
