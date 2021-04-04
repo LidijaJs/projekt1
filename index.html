@@ -74,9 +74,12 @@ uporabimo kot del stavka.
 <br>
 <br>
 Primer: <br>
-var x = 5; <br>
-var y = 6; <br>
-var z = x + y; <br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> x <span style="color:#808030; ">=</span> <span style="color:#008c00; ">5</span><span style="color:#800080; ">;</span> 
+<span style="color:#800000; font-weight:bold; ">var</span> y <span style="color:#808030; ">=</span> <span style="color:#008c00; ">6</span><span style="color:#800080; ">;</span> 
+<span style="color:#800000; font-weight:bold; ">var</span> z <span style="color:#808030; ">=</span> x <span style="color:#808030; ">+</span> y<span style="color:#800080; ">;</span> 
+  </pre>
+  
 
 
 Z zgornjega primera lahko pričakujemo, da: <br>
@@ -106,7 +109,9 @@ Identifikatorji JavaScript razlikujejo med velikimi in malimi črkami! <br>
 V JavaScript je enačba (=) operator "dodelitve" in ne operator "je enako".
 To se razlikuje od algebre. Naslednje v algebri ni smiselno:
 <br>
-x = x + 5
+
+<pre style="color:#000000;background:#ffffff;">x <span style="color:#808030; ">=</span> x <span style="color:#808030; ">+</span> <span style="color:#008c00; ">5</span>
+</pre>
 <br>
 V JavaScript pa je povsem smiselno: x dodeli vrednost x + 5.
 (Izračuna vrednost x + 5 in rezultat postavi v x. Vrednost x se poveča za 5.)
@@ -163,10 +168,13 @@ Nizi so zapisani znotraj dvojnih ali enojnih narekovajev. Številke so zapisane 
 Če številko postavite v narekovaje, bo obravnavana kot besedilni niz.
 <br><br>
 Primer<br>
-var pi = 3,14;<br>
-var oseba = "Janez Novak";<br>
-var odgovor = 'Da, sem!';<br>
-<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> pi <span style="color:#808030; ">=</span> <span style="color:#008c00; ">3</span><span style="color:#808030; ">,</span><span style="color:#008c00; ">14</span><span style="color:#800080; ">;</span>
+<span style="color:#800000; font-weight:bold; ">var</span> oseba <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Janez Novak</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+<span style="color:#800000; font-weight:bold; ">var</span> odgovor <span style="color:#808030; ">=</span> <span style="color:#800000; ">'</span><span style="color:#0000e6; ">Da, sem!</span><span style="color:#800000; ">'</span><span style="color:#800080; ">;</span>
+  </pre>
+  
+
 <b>Deklariranje (ustvarjanje) spremenljivk JavaScript</b><br>
 Ustvarjanje spremenljivke v JavaScript se imenuje "izjava" (ang. declaring) spremenljivke.
 Spremenljivko JavaScript deklarirate s ključno besedo var:<br>
@@ -174,20 +182,29 @@ var avtoIme;<br>
 Po deklaraciji spremenljivka nima vrednosti (tehnično ima vrednost undefined).
 <br><br>
 Če želite spremenljivki dodeliti vrednost, uporabite znak enačbe: <br>
-avtoIme = "Volvo"; <br>
+
+<pre style="color:#000000;background:#ffffff;">avtoIme <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+</pre>
 Spremenljivki lahko dodelite tudi vrednost, ko jo izjavite:<br>
-var carName = "Volvo"; <br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> carName <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span> 
+</pre>
 
 <b>Ponovno prijavljanje spremenljivk JavaScript</b><br>
 Če ponovno deklarirate spremenljivko JavaScript, ta ne bo izgubila vrednosti.
 Spremenljivka carName bo po izvedbi teh stavkov še vedno imela vrednost "Volvo": <br>
-var carName = "Volvo"; <br>
-var carName; <br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> carName <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span> 
+<span style="color:#800000; font-weight:bold; ">var</span> carName<span style="color:#800080; ">;</span> 
+  </pre>
+  
 
 <b>JavaScript aritmetika</b> <br>
 Kot pri algebri lahko tudi s spremenljivkami JavaScript naredite aritmetiko z uporabo operatorjev, kot sta = in +:<br>
 Primer <br>
-var x = 5 + 2 + 3; <br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> x <span style="color:#808030; ">=</span> <span style="color:#008c00; ">5</span> <span style="color:#808030; ">+</span> <span style="color:#008c00; ">2</span> <span style="color:#808030; ">+</span> <span style="color:#008c00; ">3</span><span style="color:#800080; ">;</span> 
+</pre>
 Posebnost pri spremenljivkah je, da se njihove vsebovane vrednosti lahko spreminjajo.<br>
 Druga posebnost spremenljivk je ta, da lahko vsebujejo skoraj vse - ne le nizov in števil.<br>
 Spremenljivke lahko vsebujejo tudi zapletene podatke in celo celotne funkcije. 

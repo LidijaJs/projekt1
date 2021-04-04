@@ -69,15 +69,21 @@
 Polja JavaScript se uporabljajo za shranjevanje več vrednosti v eni spremenljivki.<br>
 
 Primer:<br>
-var avtomobili = ["Saab", "Volvo", "BMW"];<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+</pre>
+<br>
 
 <b>Kaj je polje?</b><br>
 Polje je posebna spremenljivka, ki lahko vsebuje več kot eno vrednost hkrati.<br>
 Če imate seznam elementov (na primer seznam imen avtomobilov), bi lahko shranjevanje avtomobilov v posamezne spremenljivke izgledalo takole:<br>
 
-var avto1 = "Saab";<br>
-var avto2 = "Volvo";<br>
-var avto3 = "BMW";<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avto1 <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+<span style="color:#800000; font-weight:bold; ">var</span> avto2 <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+<span style="color:#800000; font-weight:bold; ">var</span> avto3 <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+  </pre>
+  
 Kaj pa, če želite zapeljati skozi avtomobile in najti točno določenega? In kaj, če ne bi imeli 3 avtomobilov, ampak 300?<br>
 Rešitev je polje!
 Polje lahko vsebuje več vrednosti pod enim imenom, do vrednosti pa lahko dostopate s sklicevanjem na indeksno številko.<br><br>
@@ -86,23 +92,38 @@ Polje lahko vsebuje več vrednosti pod enim imenom, do vrednosti pa lahko dostop
 Uporaba dobesednega polja je najlažji način za ustvarjanje JavaScriptnega polja.<br>
 Sintaksa:<br>
 
-var polje_ime = [predmet1, predmet2, ...];<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> polje_ime <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span>predmet1<span style="color:#808030; ">,</span> predmet2<span style="color:#808030; ">,</span> <span style="color:#808030; ">.</span><span style="color:#808030; ">.</span><span style="color:#808030; ">.</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+</pre>
+<br>
 Primer:<br>
-var avtomobili = ["Saab", "Volvo", "BMW"];<br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span>
+</pre>
 Razmiki in prelomi vrstic niso pomembni. Izjava lahko obsega več vrstic:<br><br>
 
 Primer:<br>
-var avtomobili = [<br>
-  "Saab",<br>
-  "Volvo",<br>
-  "BMW"<br>
-];<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span>
+  <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span>
+  <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span>
+  <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span>
+<span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+</pre>
+<br>
 
 <b>Uporaba ključne besede JavaScript "novo"</b><br>
 Naslednji primer prav tako ustvari polje in ji dodeli vrednosti:<br>
 
 Primer:<br>
-var avtomobili = novo polje ("Saab", "Volvo", "BMW");<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span>
+  <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span>
+  <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span>
+  <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span>
+<span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+</pre>
+<br><br>
 Zgornja primera počneta popolnoma enako. Ni potrebe po uporabi "novo Polje ()".
 Za poenostavitev, berljivost in hitrost izvajanja uporabite prvo (metoda dobesednega polja). <br><br>
 
@@ -110,21 +131,32 @@ Za poenostavitev, berljivost in hitrost izvajanja uporabite prvo (metoda dobesed
 Do elementa polja dostopate tako, da se sklicujete na indeksno številko.
 Ta izjava dostopa do vrednosti prvega elementa v avtomobilih:<br>
 
-var ime = avtomobili [0];<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> ime <span style="color:#808030; ">=</span> avtomobili <span style="color:#808030; ">[</span><span style="color:#008c00; ">0</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+</pre>
+<br>
 Primer:<br>
-var avtomobili = ["Saab", "Volvo", "BMW"];<br>
-document.getElementById ("demo"). innerHTML = avtomobili [0];<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span><span style="color:#808030; ">&lt;</span>br<span style="color:#808030; ">&gt;</span>
+  document<span style="color:#808030; ">.</span>getElementById<span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">demo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#808030; ">.</span>innerHTML <span style="color:#808030; ">=</span> avtomobili<span style="color:#808030; ">[</span><span style="color:#008c00; ">0</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+  </pre>
+  <br>
 Opomba: Indeksi nizov se začnejo z 0.
 [0] je prvi element. [1] je drugi element.<br><br>
 
 <b>Spreminjanje elementa polja</b><br>
 Ta izjava spremeni vrednost prvega elementa v avtomobilih:<br>
 
-avtomobili [0] = "Opel";<br><br>
-Primer:<br>
-var avtomobili = ["Saab", "Volvo", "BMW"];<br>
-avtomobili [0] = "Opel";<br>
-document.getElementById ("demo"). innerHTML = avtomobili [0];<br><br>
+
+<pre style="color:#000000;background:#ffffff;">avtomobili<span style="color:#808030; ">[</span><span style="color:#008c00; ">0</span><span style="color:#808030; ">]</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Opel</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+</pre>
+<br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+  avtomobili<span style="color:#808030; ">[</span><span style="color:#008c00; ">0</span><span style="color:#808030; ">]</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Opel</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+  document<span style="color:#808030; ">.</span>getElementById<span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">demo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#808030; ">.</span>innerHTML <span style="color:#808030; ">=</span> avtomobili<span style="color:#808030; ">[</span><span style="color:#008c00; ">0</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+  </pre>
+  <br>
 
 
 
@@ -163,73 +195,116 @@ document.getElementById ("demo"). innerHTML = avtomobili [0];<br><br>
 <b>Dostopite do celotnega polja</b><br>
 Z JavaScriptom lahko do celotnega polja pridete tako, da se sklicujete na ime polja:<br>
 Primer:<br>
-var avtomobili = ["Saab", "Volvo", "BMW"];<br>
-document.getElementById ("demo"). innerHTML = avtomobili;<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> avtomobili <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Saab</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Volvo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">BMW</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+</pre>
+<pre style="color:#000000;background:#ffffff;">document<span style="color:#808030; ">.</span>getElementById <span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">demo</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#808030; ">.</span> innerHTML <span style="color:#808030; ">=</span> avtomobili<span style="color:#800080; ">;</span>
+</pre>
+<br><br>
 
 <b>Lastnosti in metode polj</b><br>
 Prava moč nizov JavaScript so vgrajene lastnosti in metode polj:<br>
 Primeri:<br>
-var x = avtomobili.length; // Lastnost length vrne število elementov<br>
-var y = avtomobili.sort (); // Metoda sort () razvršča polja<br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> x <span style="color:#808030; ">=</span> avtomobili<span style="color:#808030; ">.</span><span style="color:#800000; font-weight:bold; ">length</span><span style="color:#800080; ">;</span> 
+<span style="color:#696969; ">// Lastnost length vrne število elementov</span>
+</pre>
+  <pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> y <span style="color:#808030; ">=</span> avtomobili<span style="color:#808030; ">.</span><span style="color:#800000; font-weight:bold; ">sort</span> <span style="color:#808030; ">(</span><span style="color:#808030; ">)</span><span style="color:#800080; ">;</span> 
+<span style="color:#696969; ">// Metoda sort () razvršča polja</span>
+  </pre>
+  <br>
 Metode nizov so zajete v naslednjih poglavjih.<br><br>
 
 <b>Lastnost dolžina</b><br>
 Lastnost dolžine polja vrne dolžino polja (število elementov polja).<br>
 Primer:<br>
-var sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
-sadje.dolžina; // dolžina plodov je 4<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+</pre>
+<br>
+
+<pre style="color:#000000;background:#ffffff;">sadje<span style="color:#808030; ">.</span>dolžina<span style="color:#800080; ">;</span> <span style="color:#696969; ">// dolžina plodov je 4</span>
+</pre>
+<br>
 
 <b>Dostop do prvega elementa polja</b><br>
 Primer:<br>
-sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
-var first = sadje [0];<br><br>
+
+<pre style="color:#000000;background:#ffffff;">sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+<span style="color:#800000; font-weight:bold; ">var</span> first <span style="color:#808030; ">=</span> sadje <span style="color:#808030; ">[</span><span style="color:#008c00; ">0</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+  </pre>
+  <br>
 
 <b>Dostop do zadnjega elementa polja</b><br>
 Primer:<br>
-sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
-var last = sadje [sadje.dolžina - 1];<br><br>
+
+<pre style="color:#000000;background:#ffffff;">sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+<span style="color:#800000; font-weight:bold; ">var</span> last <span style="color:#808030; ">=</span>sadje <span style="color:#808030; ">[</span>sadje<span style="color:#808030; ">.</span>dolžina <span style="color:#808030; ">-</span> <span style="color:#008c00; ">1</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+  </pre>
+  <br>
 
 <b>Looping elementov polja</b><br>
 Najvarnejši način zanke skozi polje je uporaba zanke za (for):<br>
 Primer:<br>
-var sadje, besedilo, fLen, i;<br>
-sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
-fLen = sadje.dolžina;<br><br>
 
-text = "&ltul&gt";<br>
-za (i = 0; i < fLen; i ++) {<br>
-  text + = "&ltli&gt" + sadje [i] + "&lt/li&gt";<br>
-}<br>
-text + = "&ltul&gt";<br><br>
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje<span style="color:#808030; ">,</span> besedilo<span style="color:#808030; ">,</span> fLen<span style="color:#808030; ">,</span> i<span style="color:#800080; ">;</span>
+sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+fLen <span style="color:#808030; ">=</span> sadje<span style="color:#808030; ">.</span>dolžina<span style="color:#800080; ">;</span>
+  </pre>
+  <br>
+
+
+  <pre style="color:#000000;background:#ffffff;">text <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltul&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+za <span style="color:#808030; ">(</span>i <span style="color:#808030; ">=</span> <span style="color:#008c00; ">0</span><span style="color:#800080; ">;</span> i <span style="color:#808030; ">&lt;</span> fLen<span style="color:#800080; ">;</span> i <span style="color:#808030; ">++</span><span style="color:#808030; ">)</span> <span style="color:#800080; ">{</span>
+  text <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltli&gt</span><span style="color:#800000; ">"</span> <span style="color:#808030; ">+</span> sadje <span style="color:#808030; ">[</span>i<span style="color:#808030; ">]</span> <span style="color:#808030; ">+</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt/li&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+<span style="color:#800080; ">}</span><span style="color:#808030; "></span><span style="color:#808030; "></span>
+text <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&ltul&gt</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+    </pre>
+    
 Uporabite lahko tudi funkcijo Array.forEach ():<br><br>
 
 Primer:<br>
-var sadje, besedilo;<br>
-sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
 
-text = "&ltul&gt";<br>
-sadje.forEach (myFunction);<br>
-besedilo + = "&lt/ul&gt";<br><br>
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje<span style="color:#808030; ">,</span> besedilo<span style="color:#800080; ">;</span>
+sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+  </pre>
+  
 
-funkcija myFunction (vrednost) {<br>
-  besedilo + = "&lt/li&gt" + vrednost + "&lt//li&gt";<br>
-}
+
+<pre style="color:#000000;background:#ffffff;">text <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt;ul&gt;</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+sadje<span style="color:#808030; ">.</span><span style="color:#800000; font-weight:bold; ">forEach</span> <span style="color:#808030; ">(</span>myFunction<span style="color:#808030; ">)</span><span style="color:#800080; ">;</span>
+  besedilo <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt;/ul&gt;</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+    
+funkcija myFunction <span style="color:#808030; ">(</span>vrednost<span style="color:#808030; ">)</span> <span style="color:#800080; ">{</span>
+  besedilo <span style="color:#808030; ">+</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt;/li&gt;</span><span style="color:#800000; ">"</span> <span style="color:#808030; ">+</span> vrednost <span style="color:#808030; ">+</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">&lt;/li&gt;</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+<span style="color:#800080; ">}</span>
+    </pre>
+    
 <br><br>
 <b>Dodajanje elementov</b><br>
 Najlažji način za dodajanje novega elementa v polje je uporaba metode push ():<br>
 Primer:<br>
-var sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
-sadje.push ("Limona"); // sadju doda nov element (Lemon)<br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+sadje<span style="color:#808030; ">.</span>push <span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Limona</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Lemon)</span>
+  </pre>
+  
 Nov element lahko v polje dodate tudi z uporabo lastnosti length:<br><br>
 
 Primer:<br>
-var sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
-sadje [fruit.length] = "limona"; // sadju doda nov element (Lemon)<br><br>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+sadje<span style="color:#808030; ">[</span>fruit<span style="color:#808030; ">.</span><span style="color:#800000; font-weight:bold; ">length</span><span style="color:#808030; ">]</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">limona</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Lemon)</span>
+</pre>
+  <br>
 OPOZORILO !
 Dodajanje elementov z visokimi indeksi lahko ustvari nedefinirane "luknje" v polju:<br>
 Primer:<br>
-var sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
-sadje [6] = "Limona"; // sadju doda nov element (Lemon)
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#800000; font-weight:bold; ">var</span> sadje <span style="color:#808030; ">=</span> <span style="color:#808030; ">[</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">Banana</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Orange</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Apple</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Mango</span><span style="color:#800000; ">"</span><span style="color:#808030; ">]</span><span style="color:#800080; ">;</span>
+sadje <span style="color:#808030; ">[</span><span style="color:#008c00; ">6</span><span style="color:#808030; ">]</span> <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">Limona</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span> <span style="color:#696969; ">// sadju doda nov element (Lemon)</span>
+  </pre>
+  
 
     <br><br><br><br>
   </div>
