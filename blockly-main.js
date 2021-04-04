@@ -1,5 +1,9 @@
 var code = '';
 
+var spd = Math.floor(Math.random() * 200); 
+
+
+var done = [];
 
 var exrMap = {
   "variables": "assets/img/var_exrs",
@@ -21,6 +25,18 @@ var workspace = Blockly.inject('blocklyDiv',
         scaleSpeed: 1.2},
    trashcan: true
 });
+
+function generateSpeed(){
+
+
+  console.log(spd);
+  document.getElementById('speed').innerHTML = spd;
+}
+
+window.addEventListener('load', function(){
+
+  generateSpeed();
+})
 //xmlContent = document.getElementById("workspaceInitialContent");
 //Blockly.Xml.domToWorkspace(xmlContent, workspace);
 
@@ -38,16 +54,11 @@ function myUpdateFunction(event) {
 workspace.addChangeListener(myUpdateFunction);
 
 function executingCode(){
-
-  eval(code);
-
+  window.alert(eval(code));
 }
 
-function setImage(chapter){
-  
-  var src = exrMap[chapter];
 
-  var img_src = document.getElementById('solution-img');
+function exersiseNumber(){
 
   var ex = document.getElementById("exercises");
   var elems = ex.getElementsByTagName('p');
@@ -57,6 +68,18 @@ function setImage(chapter){
       var exNumber = elems[i].id;
     }
   }
+  return exNumber;
+
+}
+
+
+function setImage(chapter){
+  
+  var src = exrMap[chapter];
+
+  var img_src = document.getElementById('solution-img');
+
+  var exNumber =  exersiseNumber();
 
   dir =  src + exNumber + ".png";
   img_src.setAttribute('src', dir);
@@ -79,6 +102,89 @@ function showSolution(chapter){
 
 }
 
+function move(ex) {
+  var elem = document.getElementById("myBar");
+  var progress = document.getElementById("myProgress");
+  width = progress.getAttribute('data-progress');
+
+  width = Number(width) + Number(20);
+  
+  if(width <= 100 && !done.includes(ex) ){
+    elem.style.width = width + "%";
+    elem.innerHTML = width  + "%";
+    console.log(width);
+    progress.setAttribute('data-progress', width);
+    done.push(ex);
+
+  }
+}
+
+function checkcondition(){
+
+  if(spd <= 10 && eval(code) == 'slow'){
+    window.alert('Dobro');
+    move(2);
+  }else if(spd > 10 &&spd < 40 && eval(code) == 'average'){
+    window.alert('Dobro');
+    move(2);
+  }else if(spd >= 40 &&spd < 100 && eval(code) == 'fast'){
+    window.alert('Dobro');
+    move(2);
+  }else if(spd >= 100 && spd < 180 && eval(code) == 'very fast'){
+    window.alert('Dobro');
+    move(2);
+  }else if(spd >= 180 && eval(code) == 'extremely fast'){
+    window.alert('Dobro');
+    move(2);  
+  }else{
+    window.alert('Ne dobro');
+
+  }
+
+}
+
+function testTeste(){
+  var exNum = exersiseNumber();
+  
+  switch (exNum){
+    case '1':
+      if(eval(code) == 'Količina jabolk, ki jih ima Dalja: 20'){
+        window.alert("Dobro");
+        move(1);
+      }else{
+        window.alert("Ne dobro");
+      }
+      break;
+
+    case '2':
+      checkcondition();
+      break;
+    case '3':
+      if(eval(code) == 1050){
+        window.alert("Dobro");
+        move(3);
+      }else{
+        window.alert("Ne dobro, probiraj vec");
+      }
+      break;
+    case '4':
+      if(eval(code) == [0,2,4,6,8,10,12,14,16,18,20]){
+        window.alert("Dobro");
+        move(4);
+      }else{
+        window.alert("Ne dobro, probiraj vec");
+      }
+      break;
+    case '5':
+      if(eval(code) == 'ajinevolS'){
+        move(5);
+        window.alert("Dobro");
+      }else{
+        window.alert("Ne dobro, probiraj vec");
+      }
+      break;
+    }
+  }
 
 /*
 Code.LANGUAGE_NAME = {
