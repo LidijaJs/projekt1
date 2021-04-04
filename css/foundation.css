@@ -2379,7 +2379,11 @@ a.button:hover, a.button:focus {
   padding: 0.5rem;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap; 
+  border-bottom-style: solid;
+    border-width: medium;
+    border-color: #dddddd;
+  }
   .top-bar,
   .top-bar ul {
     background-color: #e6e6e6; }
