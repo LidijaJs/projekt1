@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Blockly</title>
+    <title>Javascript Blockly </title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
@@ -41,7 +41,7 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text link" onclick="mainPage()">JavaScript z Blocklyjem  
-      </li>
+       </li>
      
     </ul>
   </div>
@@ -63,56 +63,26 @@
 <div class="grid-x grid-margin-x">
 <div class="cell large-6 medium-12">
 <br>
-<h3>Pogojni stavki</h3>	
-<br>
-<p>
-    Kadar pišemo programe se pogosto zgodu, da želimo izvesti različna dejanja za različne odločitve. Da to storimo lahko v naši kodi uporabimo pogojne stavke.<br>
-    Pogojni stavki se uporabljajo za izvajanje različnih dejanj, ki temeljijo na različnih pogojih.
-<br><br>
-V JavaScriptu poznamo naslednje pogojne stavke: 
-<ul>
-<li>"če" če želimo določiti blok kode, ki naj se izvede, če je določen pogoj resničen.</li>
-<li>"sicer" da določimo blok kode, ki naj se izvede, če je isti pogoj napačenen.</li>
-<li>"sicer če" da določimo nov pogoj za preizkus (test), če je prvi pogoj napačen.</li>
-<li>"Zamenjava" da določimo več nadomestnih blokov kode, ki jih je treba izvesti.</li>
-</ul>
+<h3>Vaje</h3>
 
-<b>Stavek če</b><br>
-Z stavkom če določite blok kode JavaScript, ki naj se izvede, če je pogoj resničen.<br>
-Sintaksa: <br>
-če (pogoj) { <br>
-   // blok kode, ki se izvede, če je pogoj resničen <br>
-} <br>
-Upoštevajte, da stavek "če" zapišemo z malimi črkami. Velike črke (Če ali ČE) bodo ustvarile napako.<br><br>
-Primer:<br>
-Če je ura manj kot 18:00, pozdravite "Dober dan":<br><br>
-
-če (ura <18) {<br>
-   pozdrav = "Dober dan";<br>
-}<br><br>
-Rezultat pozdrava bo:
-Dober dan<br><br>
-<b>Izjava sicer</b><br>
-Z izjavo sicer določite blok kode, ki naj se izvede, če je pogoj neresničen.<br><br>
-če (pogoj) {<br>
-   // blok kode, ki se izvede, če je pogoj resničen<br>
-} sicer {<br>
-   // blok kode, ki se izvede, če je pogoj neresničen<br>
-}
-<br><br>
-</p>
 <div id="exercises">
-    
     <p id="1">
-        <b>Vaja 1/2.</b>
+        <b>Vaja 1/3.</b>
         <br/>
-        Napiši program, ki primerja dve spremenljivki 'a' in 'b' in izpiše večjo. 
-    </p>
+        Ustvari polje in mu dodaj dve vrednosti. Polje nato izpiši. 
     <p id="2" hidden>
-        <b>Vaja 2/2.</b>
+        <b>Vaja 2/3.</b>
         <br/>
-       Napiši program, ki bo izpisal 'neparno', če je spremenljivka 'a' liho število in  'parno' če je spremenljivka'a' sodo število. 
+        Ustvari polje z dvema elementoma in izpiši njegovo dolžino. 
     </p>
+    <p id="3" hidden>
+        <b>Vaja 3/3.</b>
+        <br/>
+        Ustvari polje z dvema elementoma in nato izbriši zadnji element. 
+
+        
+    </p>
+
     
 </div>
 <button type="button" class="button" onclick="exrsPrev()">
@@ -124,41 +94,10 @@ Z izjavo sicer določite blok kode, ki naj se izvede, če je pogoj neresničen.<
 </div>
 
 <div class="cell large-6 medium-12">
-<br><br><br><br>
-Primer:<br>
-Če je ura manj kot 18, ustvarite pozdrav "Dober dan", drugače "Dober večer":<br><br>
 
-če (ura <18) {<br>
-   pozdrav = "Dober dan";<br>
-} sicer {<br>
-   pozdrav = "Dober večer";<br>
-}<br><br>
-Rezultat pozdrava bo: 
-Dober dan<br><br>
 
-<b>Izjava sicer če</b><br>
-Z izjavo sicer če določite nov pogoj, če je prvi pogoj napačen.<br>
-Sintaksa: <br><br>
-če (pogoj1) {<br>
-   // blok kode, ki se izvede, če je pogoj1 resničen<br>
-} sicer če (pogoj2) {<br>
-   // blok kode, ki se izvede, če je pogoj1 neresničen in pogoj2 resničen<br>
-} sicer {<br>
-   // blok kode, ki se izvede, če je pogoj1 neresničen in pogoj2 neresničen<br><br>
-Primer:<br>
-Če je ura manj od 10:00, ustvarite pozdrav "Dobro jutro", če ni, ura pa je vseeno manj kot 20:00, ustvarite pozdrav "Dober dan", sicer pa "Dober večer":<br><br>
+  </div>
 
-če (čas <10) {<br>
-   pozdrav = "Dobro jutro";<br>
-} sicer če (čas <20) {<br>
-   pozdrav = "Dober dan";<br>
-} sicer {<br>
-   pozdrav = "Dober večer";<br>
-}<br><br>
-Rezultat pozdrava bo:
-Dober dan<br><br>
-
-</div>
 
 <div class="cell large-7 medium-12 small-12">
 <div id="blocklyDiv" style="height: 500px; width: auto">
@@ -166,7 +105,7 @@ Dober dan<br><br>
 </div>
 <div class="cell large-5 medium-12 small-12 align-right">
 	<input value="Zaženi" class="button" type="button" id="codeToString" onClick="executingCode();"> 
-  <input id="solution_button" value="Rešitev" class="button" type="button" onClick="showSolution('conditions');"> 
+  <input id="solution_button" value="Rešitev" class="button" type="button" onClick="showSolution('arrays');"> 
 
 	<pre id="code-area" class="prettyprint" style="height: 443px; font-size: 13px">
 
@@ -341,8 +280,9 @@ Dober dan<br><br>
  
   </xml>
 
-<footer>
-
+  <footer>
+    
 </footer>
+
 <script src='navigation.js'></script>
 <script src='blockly-main.js'></script>

@@ -62,21 +62,79 @@
 <div class="cell large-9 medium-9 align-left">
 <div class="grid-x grid-margin-x">
 <div class="cell large-6 medium-12">
-<h3>Polja</h3>	
+<br>
+<h3>Polja</h3>
+<br>	
 <p>
-    Polja so objekti podobni seznamom, tabelam. Z njimi je možno izvajati prečne (traversal) in mutacijske operacije. 
-    Ne dolžina polja v JavaScriptu in ne tipi elementov v nizu niso fiksno določeni. Ker se lahko dolžina niza spremeni kadarkoli in se lahko shranjujejo podatki na nezapovrstnih lokacijah v polju,  polja v JavaScriptu niso nujno zgoščeni; od programerja je odvisno, kako jih bo uporabil. 
-    Na splošno so to uporabne lastnosti polj; vedar če te niso zaženjene za našo uporabo, je vredno razmisliti o uporabi zapisanih polj (ang. typed arrays).
-</p>
-<p>
-    Polja ne morajo uporabiti nizov (ang. strings) kot indeksov elementov, pač pa se zato uporablja cela števila (ang. integers). 
-    Z označevanjem ali dostopanjem elementov z neštevili, ne bomo nastavili ali pridobili elementa iz polja samega. S tem bomo nastavili ali dobili dostop do spremenljivke, ki je povezana z lastnostjo zbirke tega objekta polja.
-    Lastnosti objektov v polju in tabela elementov v polju sta ločena. Mutacijske in prečne operacije ne morajo biti uporabljene na teh lastnostih. 
+Polja JavaScript se uporabljajo za shranjevanje več vrednosti v eni spremenljivki.<br>
+
+Primer:<br>
+var avtomobili = ["Saab", "Volvo", "BMW"];<br><br>
+
+<b>Kaj je polje?</b><br>
+Polje je posebna spremenljivka, ki lahko vsebuje več kot eno vrednost hkrati.<br>
+Če imate seznam elementov (na primer seznam imen avtomobilov), bi lahko shranjevanje avtomobilov v posamezne spremenljivke izgledalo takole:<br>
+
+var avto1 = "Saab";<br>
+var avto2 = "Volvo";<br>
+var avto3 = "BMW";<br><br>
+Kaj pa, če želite zapeljati skozi avtomobile in najti točno določenega? In kaj, če ne bi imeli 3 avtomobilov, ampak 300?<br>
+Rešitev je polje!
+Polje lahko vsebuje več vrednosti pod enim imenom, do vrednosti pa lahko dostopate s sklicevanjem na indeksno številko.<br><br>
+
+<b>Ustvarjanje polje</b><br>
+Uporaba dobesednega polja je najlažji način za ustvarjanje JavaScriptnega polja.<br>
+Sintaksa:<br>
+
+var polje_ime = [predmet1, predmet2, ...];<br><br>
+Primer:<br>
+var avtomobili = ["Saab", "Volvo", "BMW"];<br>
+Razmiki in prelomi vrstic niso pomembni. Izjava lahko obsega več vrstic:<br><br>
+
+Primer:<br>
+var avtomobili = [<br>
+  "Saab",<br>
+  "Volvo",<br>
+  "BMW"<br>
+];<br><br>
+
+<b>Uporaba ključne besede JavaScript "novo"</b><br>
+Naslednji primer prav tako ustvari polje in ji dodeli vrednosti:<br>
+
+Primer:<br>
+var avtomobili = novo polje ("Saab", "Volvo", "BMW");<br><br>
+Zgornja primera počneta popolnoma enako. Ni potrebe po uporabi "novo Polje ()".
+Za poenostavitev, berljivost in hitrost izvajanja uporabite prvo (metoda dobesednega polja). <br><br>
+
+<b>Dostop do elementov polja</b><br>
+Do elementa polja dostopate tako, da se sklicujete na indeksno številko.
+Ta izjava dostopa do vrednosti prvega elementa v avtomobilih:<br>
+
+var ime = avtomobili [0];<br><br>
+Primer:<br>
+var avtomobili = ["Saab", "Volvo", "BMW"];<br>
+document.getElementById ("demo"). innerHTML = avtomobili [0];<br><br>
+Opomba: Indeksi nizov se začnejo z 0.
+[0] je prvi element. [1] je drugi element.<br><br>
+
+<b>Spreminjanje elementa polja</b><br>
+Ta izjava spremeni vrednost prvega elementa v avtomobilih:<br>
+
+avtomobili [0] = "Opel";<br><br>
+Primer:<br>
+var avtomobili = ["Saab", "Volvo", "BMW"];<br>
+avtomobili [0] = "Opel";<br>
+document.getElementById ("demo"). innerHTML = avtomobili [0];<br><br>
+
+
+
+  </p>
 <div id="exercises">
     <p id="1">
         <b>Vaja 1/3.</b>
         <br/>
         Ustvari polje in mu dodaj dve vrednosti. Polje nato izpiši. 
+    </p>    
     <p id="2" hidden>
         <b>Vaja 2/3.</b>
         <br/>
@@ -101,8 +159,79 @@
 </div>
 
 <div class="cell large-6 medium-12">
+<br><br><br><br>
+<b>Dostopite do celotnega polja</b><br>
+Z JavaScriptom lahko do celotnega polja pridete tako, da se sklicujete na ime polja:<br>
+Primer:<br>
+var avtomobili = ["Saab", "Volvo", "BMW"];<br>
+document.getElementById ("demo"). innerHTML = avtomobili;<br><br>
 
+<b>Lastnosti in metode polj</b><br>
+Prava moč nizov JavaScript so vgrajene lastnosti in metode polj:<br>
+Primeri:<br>
+var x = avtomobili.length; // Lastnost length vrne število elementov<br>
+var y = avtomobili.sort (); // Metoda sort () razvršča polja<br>
+Metode nizov so zajete v naslednjih poglavjih.<br><br>
 
+<b>Lastnost dolžina</b><br>
+Lastnost dolžine polja vrne dolžino polja (število elementov polja).<br>
+Primer:<br>
+var sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
+sadje.dolžina; // dolžina plodov je 4<br><br>
+
+<b>Dostop do prvega elementa polja</b><br>
+Primer:<br>
+sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
+var first = sadje [0];<br><br>
+
+<b>Dostop do zadnjega elementa polja</b><br>
+Primer:<br>
+sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
+var last = sadje [sadje.dolžina - 1];<br><br>
+
+<b>Looping elementov polja</b><br>
+Najvarnejši način zanke skozi polje je uporaba zanke za (for):<br>
+Primer:<br>
+var sadje, besedilo, fLen, i;<br>
+sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
+fLen = sadje.dolžina;<br><br>
+
+text = "&ltul&gt";<br>
+za (i = 0; i < fLen; i ++) {<br>
+  text + = "&ltli&gt" + sadje [i] + "&lt/li&gt";<br>
+}<br>
+text + = "&ltul&gt";<br><br>
+Uporabite lahko tudi funkcijo Array.forEach ():<br><br>
+
+Primer:<br>
+var sadje, besedilo;<br>
+sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
+
+text = "&ltul&gt";<br>
+sadje.forEach (myFunction);<br>
+besedilo + = "&lt/ul&gt";<br><br>
+
+funkcija myFunction (vrednost) {<br>
+  besedilo + = "&lt/li&gt" + vrednost + "&lt//li&gt";<br>
+}
+<br><br>
+<b>Dodajanje elementov</b><br>
+Najlažji način za dodajanje novega elementa v polje je uporaba metode push ():<br>
+Primer:<br>
+var sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
+sadje.push ("Limona"); // sadju doda nov element (Lemon)<br>
+Nov element lahko v polje dodate tudi z uporabo lastnosti length:<br><br>
+
+Primer:<br>
+var sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
+sadje [fruit.length] = "limona"; // sadju doda nov element (Lemon)<br><br>
+OPOZORILO !
+Dodajanje elementov z visokimi indeksi lahko ustvari nedefinirane "luknje" v polju:<br>
+Primer:<br>
+var sadje = ["Banana", "Orange", "Apple", "Mango"];<br>
+sadje [6] = "Limona"; // sadju doda nov element (Lemon)
+
+    <br><br><br><br>
   </div>
 
 
