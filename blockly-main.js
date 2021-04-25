@@ -11,6 +11,7 @@ var exrMap = {
   "conditions":  "assets/img/con_exrs",
   "arrays":  "assets/img/arrays_exrs",
   "functions":  "assets/img/functions_exrs",
+  "test":"assets/img/test"
 
 }
 
@@ -113,7 +114,7 @@ function move(ex) {
     done.push(ex);
 
   }
-}
+
 
 function checkcondition(){
 
