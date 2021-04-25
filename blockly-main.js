@@ -107,11 +107,7 @@ function move(ex) {
   var progress = document.getElementById("myProgress");
   width = progress.getAttribute('data-progress');
 
-  width = Number(width) + Number(20);
   
-  if(width <= 100 && !done.includes(ex) ){
-    elem.style.width = width + "%";
-    elem.innerHTML = width  + "%";
     console.log(width);
     progress.setAttribute('data-progress', width);
     done.push(ex);
@@ -122,19 +118,19 @@ function move(ex) {
 function checkcondition(){
 
   if(spd <= 10 && eval(code) == 'slow'){
-    window.alert('Pravilno');
+    window.alert('Pravilno!');
     move(2);
   }else if(spd > 10 &&spd < 40 && eval(code) == 'average'){
-    window.alert('Pravilno');
+    window.alert('Pravilno!');
     move(2);
   }else if(spd >= 40 &&spd < 100 && eval(code) == 'fast'){
-    window.alert('Pravilno');
+    window.alert('Pravilno!');
     move(2);
   }else if(spd >= 100 && spd < 180 && eval(code) == 'very fast'){
-    window.alert('Pravilno');
+    window.alert('Pravilno!');
     move(2);
   }else if(spd >= 180 && eval(code) == 'extremely fast'){
-    window.alert('Pravilno');
+    window.alert('Pravilno!');
     move(2);  
   }else{
     window.alert('Nepravilno');
@@ -149,7 +145,7 @@ function testTeste(){
   switch (exNum){
     case '1':
       if(eval(code) == 'Količina jabolk, ki jih ima Dalja: 20'){
-        window.alert("Pravilno");
+        window.alert("Pravilno!");
         move(1);
       }else{
         window.alert("Nepravilno");
@@ -161,7 +157,7 @@ function testTeste(){
       break;
     case '3':
       if(eval(code) == 1050){
-        window.alert("Pravilno");
+        window.alert("Pravilno!");
         move(3);
       }else{
         window.alert("Nepravilno");
@@ -169,7 +165,7 @@ function testTeste(){
       break;
     case '4':
       if(eval(code) == [0,2,4,6,8,10,12,14,16,18,20]){
-        window.alert("Pravilno");
+        window.alert("Pravilno!");
         move(4);
       }else{
         window.alert("Nepravilno");
@@ -178,7 +174,7 @@ function testTeste(){
     case '5':
       if(eval(code) == 'ajinevolS'){
         move(5);
-        window.alert("Pravilno");
+        window.alert("Pravilno!");
       }else{
         window.alert("Nepravilno");
       }

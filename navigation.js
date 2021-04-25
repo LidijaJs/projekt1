@@ -61,7 +61,7 @@ function exrsNext(){
  }
 
 function mainPage(){
- window.open("https://lidijajs.github.io//projekt1/prvastran.html","_self")
+ window.open("https://lidijajs.github.io/projekt1/prvastran.html","_self")
 
 }
 

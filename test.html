@@ -78,35 +78,36 @@
         <b>Vaja 1/5.</b>
         <br/>
         Ustvari spremenljivko 'a' in ji dodeli tekst 'Količina jabolk, ki jih ima Dalja: ',  Ustvari spremenljivko 'b' in ji številsko vrednost 20.
-		Ustavi spremenljivko 'c' kot povezava a in b.
+		Ustvari spremenljivko 'c', ki združi spremenljivki 'a' in 'b' v en niz.
     </p>
     <p id="2" hidden>
 	
         <b>Vaja 2/5.</b>
         <br/>
 	
-        Your programm should check variable speed and generate correct output. If our speed meets a certain condition, it should return a certain string.
-		Set speed variable to: <span id="speed"></span> <br/>
-		- If our speed is under 10 or equal - return 'slow'<br/>
-		- If our speed is over 10 and up to 40 - return 'average'<br/>
-		- If our speed is over 40 and is up to 100 - return 'fast'<br/>
-		- If our speed is over 100 and up to 180 - return 'very fast'<br/>
-		- If our speed is over 180 - return 'extremely fast'<br/>
+        Napiši program, ki preveri spremenljivko 'hitrost'.
+        Če je naša hitrost enaka določenemu pogoju, naj program vrne določen niz. 
+		Nastavi hitrost spremenljivke na: <span id="speed"></span> <br/>
+		- Če je naša hitrost enako ali manj kot 10 - vrni 'počasi'<br/>
+		- Če je neša hitrost več kot 10 in do 40 - vrni 'povprečno'<br/>
+		- Če je naša hitrost nad 40 in do 100 - vrni 'hitro'<br/>
+		- Če je naša hitrost 100 in vse do 180 - vrni 'zelo hitro'<br/>
+		- Če je naša hitrost večja kot 180 - vrni 'izjemno hitro'<br/>
 	</p>
     <p id="3" hidden>
       <b>Vaja 3/5.</b>
       <br/>
-      Napišite program, ki sešteje vse večkratnike 5 v območju od 0 do 100 (vključno).
+      Napišite program, ki sešteje vse večkratnike 5 v območju od 0 do (vključno) 100.
   </p>
   <p id="4" hidden>
     <b>Vaja 4/5.</b>
     <br/>
-	Napišite program, ki bo tabele dopolnil s parnimi številkami od 0 do 20.
+	Napišite program, ki bo polja dopolnil s parnimi številkami od 0 do 20.
 </p>
 <p id="5" hidden>
     <b>Vaja 5/5.</b>
     <br/>
-	Write a JavaScript function that reverse a string 'Slovenija'
+	Napiši funkcijo, ki obrne niz 'Slovenija'. 
     
 </p>
     
@@ -130,7 +131,8 @@
 
 <div class="cell large-5 medium-12 small-12 align-right">
 	<input value="Zaženi" class="button" type="button" id="codeToString" onClick="executingCode();"> 
-  <input id="checkButton" value="Preveri" class="button" type="button" onClick="testTeste();"> 
+  <input id="checkButton" value="Preveri" class="button" type="button" onClick="testTeste();">
+  <input id="solution_button" value="Rešitev" class="button" type="button" onClick="showSolution('conditions');">  
   <!-- <input id="solution_button" value="Rešitev" class="button" type="button" onClick="showSolution('variables');"> -->
 
 	<pre id="code-area" class="prettyprint" style="height: 443px; font-size: 13px">
